@@ -8,7 +8,15 @@ describe("studyDataSchema", () => {
     const result = studyDataSchema.parse(seedData);
 
     expect(result.courses).toHaveLength(6);
-    expect(result.topics.length).toBeGreaterThan(100);
+    const learningItemCount = result.topics.reduce(
+      (count, topic) => count + 1 + topic.subtopics.length,
+      0,
+    );
+    expect(learningItemCount).toBeGreaterThan(100);
+    expect(
+      result.topics.find((topic) => topic.id === "discrete-relations")
+        ?.subtopics.length,
+    ).toBeGreaterThan(0);
   });
 
   it("accepts a version-one study document", () => {
@@ -37,6 +45,7 @@ describe("studyDataSchema", () => {
     });
 
     expect(result.schemaVersion).toBe(1);
+    expect(result.topics[0].subtopics).toEqual([]);
   });
 
   it("rejects topics that point to a missing course", () => {

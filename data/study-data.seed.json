@@ -2,196 +2,2203 @@
   "schemaVersion": 1,
   "updatedAt": "2026-06-21T00:00:00.000Z",
   "courses": [
-    { "id": "low-level-languages", "name": "Low-Level Languages", "shortName": "Low-Level", "examAt": "2026-07-05T14:00:00+03:00", "secondExamAt": "2026-07-28T14:00:00+03:00", "position": 0 },
-    { "id": "mathematical-logic", "name": "Mathematical Logic", "shortName": "Logic", "examAt": "2026-07-10T09:00:00+03:00", "secondExamAt": "2026-08-12T16:00:00+03:00", "position": 1 },
-    { "id": "discrete-mathematics", "name": "Discrete Mathematics", "shortName": "Discrete", "examAt": "2026-07-12T14:00:00+03:00", "secondExamAt": "2026-08-09T16:00:00+03:00", "position": 2 },
-    { "id": "programming-2", "name": "Programming 2", "shortName": "Programming 2", "examAt": "2026-07-14T09:00:00+03:00", "secondExamAt": "2026-08-19T16:00:00+03:00", "position": 3 },
-    { "id": "linear-algebra", "name": "Linear Algebra", "shortName": "Linear Algebra", "examAt": "2026-07-17T09:00:00+03:00", "secondExamAt": "2026-08-25T16:00:00+03:00", "position": 4 },
-    { "id": "probability-statistics", "name": "Probability and Statistics", "shortName": "Probability", "examAt": "2026-07-21T09:00:00+03:00", "secondExamAt": "2026-08-14T09:00:00+03:00", "position": 5 }
+    {
+      "id": "low-level-languages",
+      "name": "שפות סף",
+      "shortName": "שפות סף",
+      "examAt": "2026-07-05T14:00:00+03:00",
+      "secondExamAt": "2026-07-28T14:00:00+03:00",
+      "position": 0
+    },
+    {
+      "id": "mathematical-logic",
+      "name": "לוגיקה מתמטית",
+      "shortName": "לוגיקה",
+      "examAt": "2026-07-10T09:00:00+03:00",
+      "secondExamAt": "2026-08-12T16:00:00+03:00",
+      "position": 1
+    },
+    {
+      "id": "discrete-mathematics",
+      "name": "מתמטיקה בדידה",
+      "shortName": "בדידה",
+      "examAt": "2026-07-12T14:00:00+03:00",
+      "secondExamAt": "2026-08-09T16:00:00+03:00",
+      "position": 2
+    },
+    {
+      "id": "programming-2",
+      "name": "תכנות 2",
+      "shortName": "תכנות 2",
+      "examAt": "2026-07-14T09:00:00+03:00",
+      "secondExamAt": "2026-08-19T16:00:00+03:00",
+      "position": 3
+    },
+    {
+      "id": "linear-algebra",
+      "name": "אלגברה לינארית",
+      "shortName": "אלגברה לינארית",
+      "examAt": "2026-07-17T09:00:00+03:00",
+      "secondExamAt": "2026-08-25T16:00:00+03:00",
+      "position": 4
+    },
+    {
+      "id": "probability-statistics",
+      "name": "מבוא לסטטיסטיקה והסתברות",
+      "shortName": "סטטיסטיקה",
+      "examAt": "2026-07-21T09:00:00+03:00",
+      "secondExamAt": "2026-08-14T09:00:00+03:00",
+      "position": 5
+    }
   ],
   "topics": [
-    { "id": "low-level-environment-setup", "courseId": "low-level-languages", "name": "Environment setup", "level": "not-started", "importance": "normal", "position": 0 },
-    { "id": "low-level-cpu-organization", "courseId": "low-level-languages", "name": "CPU organization", "level": "not-started", "importance": "normal", "position": 1 },
-    { "id": "low-level-memory-registers", "courseId": "low-level-languages", "name": "Memory and registers", "level": "not-started", "importance": "normal", "position": 2 },
-    { "id": "low-level-machine-code", "courseId": "low-level-languages", "name": "Machine code", "level": "not-started", "importance": "normal", "position": 3 },
-    { "id": "low-level-assembler-loader", "courseId": "low-level-languages", "name": "Assembler and loader", "level": "not-started", "importance": "normal", "position": 4 },
-    { "id": "low-level-memory-maps", "courseId": "low-level-languages", "name": "Memory maps", "level": "not-started", "importance": "normal", "position": 5 },
-    { "id": "low-level-program-structure", "courseId": "low-level-languages", "name": "Assembly program structure", "level": "not-started", "importance": "normal", "position": 6 },
-    { "id": "low-level-labels-opcodes-operands", "courseId": "low-level-languages", "name": "Labels, opcodes and operands", "level": "not-started", "importance": "normal", "position": 7 },
-    { "id": "low-level-directives", "courseId": "low-level-languages", "name": "Assembler directives", "level": "not-started", "importance": "normal", "position": 8 },
-    { "id": "low-level-memory-instructions", "courseId": "low-level-languages", "name": "Memory instructions", "level": "not-started", "importance": "normal", "position": 9 },
-    { "id": "low-level-register-instructions", "courseId": "low-level-languages", "name": "Register instructions", "level": "not-started", "importance": "normal", "position": 10 },
-    { "id": "low-level-conditional-skips", "courseId": "low-level-languages", "name": "Conditional skip instructions", "level": "not-started", "importance": "normal", "position": 11 },
-    { "id": "low-level-input-output", "courseId": "low-level-languages", "name": "Input and output", "level": "not-started", "importance": "normal", "position": 12 },
-    { "id": "low-level-interrupts", "courseId": "low-level-languages", "name": "Interrupts", "level": "not-started", "importance": "normal", "position": 13 },
-    { "id": "low-level-branches", "courseId": "low-level-languages", "name": "Branches", "level": "not-started", "importance": "normal", "position": 14 },
-    { "id": "low-level-loops", "courseId": "low-level-languages", "name": "Loops", "level": "not-started", "importance": "normal", "position": 15 },
-    { "id": "low-level-subroutines", "courseId": "low-level-languages", "name": "Subroutines", "level": "not-started", "importance": "normal", "position": 16 },
-    { "id": "low-level-algorithm-translation", "courseId": "low-level-languages", "name": "Translating algorithms to assembly", "level": "not-started", "importance": "normal", "position": 17 },
-    { "id": "low-level-simulator-debugging", "courseId": "low-level-languages", "name": "Simulator debugging", "level": "not-started", "importance": "normal", "position": 18 },
-    { "id": "low-level-readable-assembly", "courseId": "low-level-languages", "name": "Readable assembly", "level": "not-started", "importance": "normal", "position": 19 },
-
-    { "id": "logic-propositions", "courseId": "mathematical-logic", "name": "Atomic and compound propositions", "level": "not-started", "importance": "normal", "position": 0 },
-    { "id": "logic-connectives", "courseId": "mathematical-logic", "name": "Logical connectives", "level": "not-started", "importance": "normal", "position": 1 },
-    { "id": "logic-precedence", "courseId": "mathematical-logic", "name": "Operator precedence", "level": "not-started", "importance": "normal", "position": 2 },
-    { "id": "logic-truth-tables", "courseId": "mathematical-logic", "name": "Truth tables", "level": "not-started", "importance": "normal", "position": 3 },
-    { "id": "logic-equivalences", "courseId": "mathematical-logic", "name": "Logical equivalences", "level": "not-started", "importance": "normal", "position": 4 },
-    { "id": "logic-satisfiability", "courseId": "mathematical-logic", "name": "Tautologies, contradictions and satisfiability", "level": "not-started", "importance": "normal", "position": 5 },
-    { "id": "logic-sentence-translation", "courseId": "mathematical-logic", "name": "Translating sentences into logic", "level": "not-started", "importance": "normal", "position": 6 },
-    { "id": "logic-first-order", "courseId": "mathematical-logic", "name": "First-order logic", "level": "not-started", "importance": "normal", "position": 7 },
-    { "id": "logic-predicates", "courseId": "mathematical-logic", "name": "Predicates, variables and functions", "level": "not-started", "importance": "normal", "position": 8 },
-    { "id": "logic-quantifiers", "courseId": "mathematical-logic", "name": "Universal and existential quantifiers", "level": "not-started", "importance": "normal", "position": 9 },
-    { "id": "logic-quantified-negation", "courseId": "mathematical-logic", "name": "Negating quantified formulas", "level": "not-started", "importance": "normal", "position": 10 },
-    { "id": "logic-necessary-sufficient", "courseId": "mathematical-logic", "name": "Necessary and sufficient conditions", "level": "not-started", "importance": "normal", "position": 11 },
-    { "id": "logic-direct-proof", "courseId": "mathematical-logic", "name": "Direct proof", "level": "not-started", "importance": "normal", "position": 12 },
-    { "id": "logic-contraposition", "courseId": "mathematical-logic", "name": "Proof by contraposition", "level": "not-started", "importance": "normal", "position": 13 },
-    { "id": "logic-contradiction", "courseId": "mathematical-logic", "name": "Proof by contradiction", "level": "not-started", "importance": "normal", "position": 14 },
-    { "id": "logic-counterexamples", "courseId": "mathematical-logic", "name": "Counterexamples", "level": "not-started", "importance": "normal", "position": 15 },
-    { "id": "logic-cnf", "courseId": "mathematical-logic", "name": "CNF normal form", "level": "not-started", "importance": "normal", "position": 16 },
-    { "id": "logic-dnf", "courseId": "mathematical-logic", "name": "DNF normal form", "level": "not-started", "importance": "normal", "position": 17 },
-    { "id": "logic-semantic-tableaux", "courseId": "mathematical-logic", "name": "Semantic tableaux", "level": "not-started", "importance": "normal", "position": 18 },
-    { "id": "logic-literals-clauses", "courseId": "mathematical-logic", "name": "Literals and clauses", "level": "not-started", "importance": "normal", "position": 19 },
-    { "id": "logic-resolution", "courseId": "mathematical-logic", "name": "Resolution", "level": "not-started", "importance": "normal", "position": 20 },
-    { "id": "logic-interpretations-models", "courseId": "mathematical-logic", "name": "Interpretations and models", "level": "not-started", "importance": "normal", "position": 21 },
-    { "id": "logic-logical-consequence", "courseId": "mathematical-logic", "name": "Logical consequence", "level": "not-started", "importance": "normal", "position": 22 },
-    { "id": "logic-propositional-inference", "courseId": "mathematical-logic", "name": "Propositional inference", "level": "not-started", "importance": "normal", "position": 23 },
-    { "id": "logic-knowledge-bases", "courseId": "mathematical-logic", "name": "Knowledge bases", "level": "not-started", "importance": "normal", "position": 24 },
-    { "id": "logic-substitution", "courseId": "mathematical-logic", "name": "Substitution", "level": "not-started", "importance": "normal", "position": 25 },
-    { "id": "logic-unification", "courseId": "mathematical-logic", "name": "Unification", "level": "not-started", "importance": "normal", "position": 26 },
-    { "id": "logic-first-order-inference", "courseId": "mathematical-logic", "name": "First-order inference", "level": "not-started", "importance": "normal", "position": 27 },
-    { "id": "logic-structural-induction", "courseId": "mathematical-logic", "name": "Structural induction", "level": "not-started", "importance": "normal", "position": 28 },
-    { "id": "logic-recursive-definitions", "courseId": "mathematical-logic", "name": "Recursive definitions", "level": "not-started", "importance": "normal", "position": 29 },
-    { "id": "logic-propositional-syntax", "courseId": "mathematical-logic", "name": "Propositional-language syntax", "level": "not-started", "importance": "normal", "position": 30 },
-    { "id": "logic-construction-trees", "courseId": "mathematical-logic", "name": "Construction and derivation trees", "level": "not-started", "importance": "normal", "position": 31 },
-    { "id": "logic-recursive-functions", "courseId": "mathematical-logic", "name": "Recursive functions on structures", "level": "not-started", "importance": "normal", "position": 32 },
-
-    { "id": "discrete-sets", "courseId": "discrete-mathematics", "name": "Sets and notation", "level": "not-started", "importance": "normal", "position": 0 },
-    { "id": "discrete-set-equality", "courseId": "discrete-mathematics", "name": "Set equality", "level": "not-started", "importance": "normal", "position": 1 },
-    { "id": "discrete-set-operations", "courseId": "discrete-mathematics", "name": "Set operations", "level": "not-started", "importance": "normal", "position": 2 },
-    { "id": "discrete-set-proofs", "courseId": "discrete-mathematics", "name": "Set proofs", "level": "not-started", "importance": "normal", "position": 3 },
-    { "id": "discrete-relations", "courseId": "discrete-mathematics", "name": "Relations", "level": "not-started", "importance": "normal", "position": 4 },
-    { "id": "discrete-relation-properties", "courseId": "discrete-mathematics", "name": "Relation properties", "level": "not-started", "importance": "normal", "position": 5 },
-    { "id": "discrete-functions", "courseId": "discrete-mathematics", "name": "Functions", "level": "not-started", "importance": "normal", "position": 6 },
-    { "id": "discrete-composition", "courseId": "discrete-mathematics", "name": "Function composition", "level": "not-started", "importance": "normal", "position": 7 },
-    { "id": "discrete-injective", "courseId": "discrete-mathematics", "name": "Injective functions", "level": "not-started", "importance": "normal", "position": 8 },
-    { "id": "discrete-surjective", "courseId": "discrete-mathematics", "name": "Surjective functions", "level": "not-started", "importance": "normal", "position": 9 },
-    { "id": "discrete-bijective", "courseId": "discrete-mathematics", "name": "Bijective functions", "level": "not-started", "importance": "normal", "position": 10 },
-    { "id": "discrete-infinite-sets", "courseId": "discrete-mathematics", "name": "Infinite sets", "level": "not-started", "importance": "normal", "position": 11 },
-    { "id": "discrete-cardinality", "courseId": "discrete-mathematics", "name": "Cardinality", "level": "not-started", "importance": "normal", "position": 12 },
-    { "id": "discrete-countability", "courseId": "discrete-mathematics", "name": "Countability", "level": "not-started", "importance": "normal", "position": 13 },
-    { "id": "discrete-induction", "courseId": "discrete-mathematics", "name": "Mathematical induction", "level": "not-started", "importance": "normal", "position": 14 },
-    { "id": "discrete-inductive-structures", "courseId": "discrete-mathematics", "name": "Inductively defined structures", "level": "not-started", "importance": "normal", "position": 15 },
-    { "id": "discrete-structural-induction", "courseId": "discrete-mathematics", "name": "Structural induction", "level": "not-started", "importance": "normal", "position": 16 },
-    { "id": "discrete-recursive-functions", "courseId": "discrete-mathematics", "name": "Recursive functions", "level": "not-started", "importance": "normal", "position": 17 },
-    { "id": "discrete-recurrence-relations", "courseId": "discrete-mathematics", "name": "Recurrence relations", "level": "not-started", "importance": "normal", "position": 18 },
-    { "id": "discrete-counting-rules", "courseId": "discrete-mathematics", "name": "Counting rules", "level": "not-started", "importance": "normal", "position": 19 },
-    { "id": "discrete-permutations-selections", "courseId": "discrete-mathematics", "name": "Permutations and selections", "level": "not-started", "importance": "normal", "position": 20 },
-    { "id": "discrete-counting-repetition", "courseId": "discrete-mathematics", "name": "Counting with repetition", "level": "not-started", "importance": "normal", "position": 21 },
-    { "id": "discrete-identical-objects", "courseId": "discrete-mathematics", "name": "Distributing identical objects", "level": "not-started", "importance": "normal", "position": 22 },
-    { "id": "discrete-binomial-coefficients", "courseId": "discrete-mathematics", "name": "Binomial coefficients", "level": "not-started", "importance": "normal", "position": 23 },
-    { "id": "discrete-newton-binomial", "courseId": "discrete-mathematics", "name": "Newton's binomial theorem", "level": "not-started", "importance": "normal", "position": 24 },
-    { "id": "discrete-combinatorial-identities", "courseId": "discrete-mathematics", "name": "Combinatorial identities", "level": "not-started", "importance": "normal", "position": 25 },
-    { "id": "discrete-inclusion-exclusion", "courseId": "discrete-mathematics", "name": "Inclusion-exclusion", "level": "not-started", "importance": "normal", "position": 26 },
-
-    { "id": "programming-c-structure", "courseId": "programming-2", "name": "C program structure", "level": "not-started", "importance": "normal", "position": 0 },
-    { "id": "programming-compilation", "courseId": "programming-2", "name": "Compilation", "level": "not-started", "importance": "normal", "position": 1 },
-    { "id": "programming-header-implementation", "courseId": "programming-2", "name": "Header and implementation files", "level": "not-started", "importance": "normal", "position": 2 },
-    { "id": "programming-modules", "courseId": "programming-2", "name": "Modular programming", "level": "not-started", "importance": "normal", "position": 3 },
-    { "id": "programming-structures", "courseId": "programming-2", "name": "Structures", "level": "not-started", "importance": "normal", "position": 4 },
-    { "id": "programming-structure-pointers", "courseId": "programming-2", "name": "Structure pointers", "level": "not-started", "importance": "normal", "position": 5 },
-    { "id": "programming-pointers", "courseId": "programming-2", "name": "Pointers", "level": "not-started", "importance": "normal", "position": 6 },
-    { "id": "programming-pointer-arithmetic", "courseId": "programming-2", "name": "Pointer arithmetic", "level": "not-started", "importance": "normal", "position": 7 },
-    { "id": "programming-dynamic-allocation", "courseId": "programming-2", "name": "Dynamic memory allocation", "level": "not-started", "importance": "normal", "position": 8 },
-    { "id": "programming-allocation-functions", "courseId": "programming-2", "name": "malloc, calloc, realloc and free", "level": "not-started", "importance": "normal", "position": 9 },
-    { "id": "programming-memory-ownership", "courseId": "programming-2", "name": "Memory ownership", "level": "not-started", "importance": "normal", "position": 10 },
-    { "id": "programming-text-files", "courseId": "programming-2", "name": "Text files", "level": "not-started", "importance": "normal", "position": 11 },
-    { "id": "programming-streams", "courseId": "programming-2", "name": "File streams", "level": "not-started", "importance": "normal", "position": 12 },
-    { "id": "programming-open-close-files", "courseId": "programming-2", "name": "Opening and closing files", "level": "not-started", "importance": "normal", "position": 13 },
-    { "id": "programming-formatted-io", "courseId": "programming-2", "name": "Formatted file I/O", "level": "not-started", "importance": "normal", "position": 14 },
-    { "id": "programming-file-errors", "courseId": "programming-2", "name": "File errors and validation", "level": "not-started", "importance": "normal", "position": 15 },
-    { "id": "programming-linked-nodes", "courseId": "programming-2", "name": "Linked-list nodes", "level": "not-started", "importance": "normal", "position": 16 },
-    { "id": "programming-list-traversal", "courseId": "programming-2", "name": "List traversal and search", "level": "not-started", "importance": "normal", "position": 17 },
-    { "id": "programming-list-insertion", "courseId": "programming-2", "name": "List insertion", "level": "not-started", "importance": "normal", "position": 18 },
-    { "id": "programming-list-deletion", "courseId": "programming-2", "name": "List deletion", "level": "not-started", "importance": "normal", "position": 19 },
-    { "id": "programming-free-lists", "courseId": "programming-2", "name": "Freeing linked lists", "level": "not-started", "importance": "normal", "position": 20 },
-    { "id": "programming-empty-lists", "courseId": "programming-2", "name": "Empty-list handling", "level": "not-started", "importance": "normal", "position": 21 },
-    { "id": "programming-adt", "courseId": "programming-2", "name": "Abstract data types", "level": "not-started", "importance": "normal", "position": 22 },
-    { "id": "programming-encapsulation", "courseId": "programming-2", "name": "Encapsulation", "level": "not-started", "importance": "normal", "position": 23 },
-    { "id": "programming-interface-implementation", "courseId": "programming-2", "name": "Interface versus implementation", "level": "not-started", "importance": "normal", "position": 24 },
-    { "id": "programming-function-pointers", "courseId": "programming-2", "name": "Function pointers", "level": "not-started", "importance": "normal", "position": 25 },
-    { "id": "programming-record-databases", "courseId": "programming-2", "name": "Record and file databases", "level": "not-started", "importance": "normal", "position": 26 },
-
-    { "id": "linear-equations", "courseId": "linear-algebra", "name": "Linear equations", "level": "not-started", "importance": "normal", "position": 0 },
-    { "id": "linear-systems", "courseId": "linear-algebra", "name": "Systems of linear equations", "level": "not-started", "importance": "normal", "position": 1 },
-    { "id": "linear-system-geometry", "courseId": "linear-algebra", "name": "Geometry of linear systems", "level": "not-started", "importance": "normal", "position": 2 },
-    { "id": "linear-gaussian-elimination", "courseId": "linear-algebra", "name": "Gaussian elimination", "level": "not-started", "importance": "normal", "position": 3 },
-    { "id": "linear-rref", "courseId": "linear-algebra", "name": "Reduced row-echelon form", "level": "not-started", "importance": "normal", "position": 4 },
-    { "id": "linear-solution-cases", "courseId": "linear-algebra", "name": "Solution cases", "level": "not-started", "importance": "normal", "position": 5 },
-    { "id": "linear-free-variables", "courseId": "linear-algebra", "name": "Free variables", "level": "not-started", "importance": "normal", "position": 6 },
-    { "id": "linear-solution-spaces", "courseId": "linear-algebra", "name": "Solution spaces", "level": "not-started", "importance": "normal", "position": 7 },
-    { "id": "linear-matrix-operations", "courseId": "linear-algebra", "name": "Matrix operations", "level": "not-started", "importance": "normal", "position": 8 },
-    { "id": "linear-transpose", "courseId": "linear-algebra", "name": "Matrix transpose", "level": "not-started", "importance": "normal", "position": 9 },
-    { "id": "linear-inverse", "courseId": "linear-algebra", "name": "Inverse matrices", "level": "not-started", "importance": "normal", "position": 10 },
-    { "id": "linear-elementary-matrices", "courseId": "linear-algebra", "name": "Elementary matrices", "level": "not-started", "importance": "normal", "position": 11 },
-    { "id": "linear-lu", "courseId": "linear-algebra", "name": "LU factorization", "level": "not-started", "importance": "normal", "position": 12 },
-    { "id": "linear-determinants", "courseId": "linear-algebra", "name": "Determinants", "level": "not-started", "importance": "normal", "position": 13 },
-    { "id": "linear-laplace", "courseId": "linear-algebra", "name": "Laplace expansion", "level": "not-started", "importance": "normal", "position": 14 },
-    { "id": "linear-determinant-properties", "courseId": "linear-algebra", "name": "Determinant properties", "level": "not-started", "importance": "normal", "position": 15 },
-    { "id": "linear-determinant-applications", "courseId": "linear-algebra", "name": "Determinant applications", "level": "not-started", "importance": "normal", "position": 16 },
-    { "id": "linear-vector-spaces", "courseId": "linear-algebra", "name": "Vector spaces", "level": "not-started", "importance": "normal", "position": 17 },
-    { "id": "linear-subspaces", "courseId": "linear-algebra", "name": "Subspaces", "level": "not-started", "importance": "normal", "position": 18 },
-    { "id": "linear-span", "courseId": "linear-algebra", "name": "Linear combinations and span", "level": "not-started", "importance": "normal", "position": 19 },
-    { "id": "linear-independence", "courseId": "linear-algebra", "name": "Linear independence", "level": "not-started", "importance": "normal", "position": 20 },
-    { "id": "linear-basis", "courseId": "linear-algebra", "name": "Basis", "level": "not-started", "importance": "normal", "position": 21 },
-    { "id": "linear-dimension", "courseId": "linear-algebra", "name": "Dimension", "level": "not-started", "importance": "normal", "position": 22 },
-    { "id": "linear-coordinates", "courseId": "linear-algebra", "name": "Coordinates relative to a basis", "level": "not-started", "importance": "normal", "position": 23 },
-    { "id": "linear-change-basis", "courseId": "linear-algebra", "name": "Change of basis", "level": "not-started", "importance": "normal", "position": 24 },
-    { "id": "linear-transformations", "courseId": "linear-algebra", "name": "Linear transformations", "level": "not-started", "importance": "normal", "position": 25 },
-    { "id": "linear-kernel", "courseId": "linear-algebra", "name": "Kernel", "level": "not-started", "importance": "normal", "position": 26 },
-    { "id": "linear-image", "courseId": "linear-algebra", "name": "Image", "level": "not-started", "importance": "normal", "position": 27 },
-    { "id": "linear-transformation-matrices", "courseId": "linear-algebra", "name": "Transformation matrices", "level": "not-started", "importance": "normal", "position": 28 },
-    { "id": "linear-similar-matrices", "courseId": "linear-algebra", "name": "Similar matrices", "level": "not-started", "importance": "normal", "position": 29 },
-    { "id": "linear-eigenvalues", "courseId": "linear-algebra", "name": "Eigenvalues", "level": "not-started", "importance": "normal", "position": 30 },
-    { "id": "linear-eigenvectors", "courseId": "linear-algebra", "name": "Eigenvectors", "level": "not-started", "importance": "normal", "position": 31 },
-    { "id": "linear-eigenspaces", "courseId": "linear-algebra", "name": "Eigenspaces", "level": "not-started", "importance": "normal", "position": 32 },
-    { "id": "linear-multiplicity", "courseId": "linear-algebra", "name": "Algebraic and geometric multiplicity", "level": "not-started", "importance": "normal", "position": 33 },
-    { "id": "linear-diagonalization", "courseId": "linear-algebra", "name": "Diagonalization", "level": "not-started", "importance": "normal", "position": 34 },
-    { "id": "linear-matrix-powers", "courseId": "linear-algebra", "name": "Matrix powers", "level": "not-started", "importance": "normal", "position": 35 },
-    { "id": "linear-complex-numbers", "courseId": "linear-algebra", "name": "Complex numbers", "level": "not-started", "importance": "normal", "position": 36 },
-    { "id": "linear-polar-form", "courseId": "linear-algebra", "name": "Polar form", "level": "not-started", "importance": "normal", "position": 37 },
-    { "id": "linear-complex-powers-roots", "courseId": "linear-algebra", "name": "Complex powers and roots", "level": "not-started", "importance": "normal", "position": 38 },
-
-    { "id": "stats-variable-types", "courseId": "probability-statistics", "name": "Variable types and measurement scales", "level": "not-started", "importance": "normal", "position": 0 },
-    { "id": "stats-frequency-tables", "courseId": "probability-statistics", "name": "Frequency tables", "level": "not-started", "importance": "normal", "position": 1 },
-    { "id": "stats-central-tendency", "courseId": "probability-statistics", "name": "Mode, median and mean", "level": "not-started", "importance": "normal", "position": 2 },
-    { "id": "stats-variance-standard-deviation", "courseId": "probability-statistics", "name": "Variance and standard deviation", "level": "not-started", "importance": "normal", "position": 3 },
-    { "id": "stats-range-iqr", "courseId": "probability-statistics", "name": "Range and interquartile range", "level": "not-started", "importance": "normal", "position": 4 },
-    { "id": "stats-linear-transformations", "courseId": "probability-statistics", "name": "Linear transformations of measures", "level": "not-started", "importance": "normal", "position": 5 },
-    { "id": "stats-correlation", "courseId": "probability-statistics", "name": "Correlation", "level": "not-started", "importance": "normal", "position": 6 },
-    { "id": "stats-regression", "courseId": "probability-statistics", "name": "Linear regression", "level": "not-started", "importance": "normal", "position": 7 },
-    { "id": "stats-probability-basics", "courseId": "probability-statistics", "name": "Probability basics", "level": "not-started", "importance": "normal", "position": 8 },
-    { "id": "stats-combinatorics", "courseId": "probability-statistics", "name": "Combinatorics", "level": "not-started", "importance": "normal", "position": 9 },
-    { "id": "stats-conditional-probability", "courseId": "probability-statistics", "name": "Conditional probability", "level": "not-started", "importance": "normal", "position": 10 },
-    { "id": "stats-probability-functions", "courseId": "probability-statistics", "name": "Probability functions", "level": "not-started", "importance": "normal", "position": 11 },
-    { "id": "stats-discrete-uniform", "courseId": "probability-statistics", "name": "Discrete uniform distribution", "level": "not-started", "importance": "normal", "position": 12 },
-    { "id": "stats-binomial", "courseId": "probability-statistics", "name": "Binomial distribution", "level": "not-started", "importance": "normal", "position": 13 },
-    { "id": "stats-geometric", "courseId": "probability-statistics", "name": "Geometric distribution", "level": "not-started", "importance": "normal", "position": 14 },
-    { "id": "stats-hypergeometric", "courseId": "probability-statistics", "name": "Hypergeometric distribution", "level": "not-started", "importance": "normal", "position": 15 },
-    { "id": "stats-poisson", "courseId": "probability-statistics", "name": "Poisson distribution", "level": "not-started", "importance": "normal", "position": 16 },
-    { "id": "stats-exponential", "courseId": "probability-statistics", "name": "Exponential distribution", "level": "not-started", "importance": "normal", "position": 17 },
-    { "id": "stats-normal", "courseId": "probability-statistics", "name": "Normal distribution", "level": "not-started", "importance": "normal", "position": 18 },
-    { "id": "stats-normal-approximation", "courseId": "probability-statistics", "name": "Normal approximation to binomial", "level": "not-started", "importance": "normal", "position": 19 },
-    { "id": "stats-populations-samples", "courseId": "probability-statistics", "name": "Populations, samples and parameters", "level": "not-started", "importance": "normal", "position": 20 },
-    { "id": "stats-sampling-distributions", "courseId": "probability-statistics", "name": "Sampling distributions", "level": "not-started", "importance": "normal", "position": 21 },
-    { "id": "stats-clt", "courseId": "probability-statistics", "name": "Central Limit Theorem", "level": "not-started", "importance": "normal", "position": 22 },
-    { "id": "stats-ci-mean", "courseId": "probability-statistics", "name": "Confidence interval for a mean", "level": "not-started", "importance": "normal", "position": 23 },
-    { "id": "stats-ci-proportion", "courseId": "probability-statistics", "name": "Confidence interval for a proportion", "level": "not-started", "importance": "normal", "position": 24 },
-    { "id": "stats-ci-mean-difference", "courseId": "probability-statistics", "name": "Confidence interval for a difference of means", "level": "not-started", "importance": "normal", "position": 25 },
-    { "id": "stats-hypothesis-testing", "courseId": "probability-statistics", "name": "Hypothesis testing", "level": "not-started", "importance": "normal", "position": 26 },
-    { "id": "stats-test-mean", "courseId": "probability-statistics", "name": "Test for a mean", "level": "not-started", "importance": "normal", "position": 27 },
-    { "id": "stats-test-proportion", "courseId": "probability-statistics", "name": "Test for a proportion", "level": "not-started", "importance": "normal", "position": 28 },
-    { "id": "stats-test-mean-difference", "courseId": "probability-statistics", "name": "Test for a difference of means", "level": "not-started", "importance": "normal", "position": 29 },
-    { "id": "stats-chi-square-fit", "courseId": "probability-statistics", "name": "Chi-square goodness of fit", "level": "not-started", "importance": "normal", "position": 30 },
-    { "id": "stats-chi-square-independence", "courseId": "probability-statistics", "name": "Chi-square independence", "level": "not-started", "importance": "normal", "position": 31 }
+    {
+      "id": "low-level-variables-assignments",
+      "courseId": "low-level-languages",
+      "name": "משתנים, אתחול והשמות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 0
+    },
+    {
+      "id": "low-level-number-bases",
+      "courseId": "low-level-languages",
+      "name": "ייצוג מספרים בבסיס בינארי והקסדצימלי",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 1
+    },
+    {
+      "id": "low-level-conditionals-branches",
+      "courseId": "low-level-languages",
+      "name": "תנאים, השוואות והסתעפויות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 2
+    },
+    {
+      "id": "low-level-twos-complement",
+      "courseId": "low-level-languages",
+      "name": "מספרים שליליים וייצוג משלים ל-2",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 3
+    },
+    {
+      "id": "low-level-signed-unsigned-arithmetic",
+      "courseId": "low-level-languages",
+      "name": "חשבון במספרים מסומנים ולא מסומנים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 4
+    },
+    {
+      "id": "low-level-overflow-carry",
+      "courseId": "low-level-languages",
+      "name": "גלישה, תת-גלישה ודגל הנשיאה E",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 5
+    },
+    {
+      "id": "low-level-double-length-arithmetic",
+      "courseId": "low-level-languages",
+      "name": "חשבון באורך כפול: 32 ביט בשתי מילים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 6
+    },
+    {
+      "id": "low-level-logic-de-morgan",
+      "courseId": "low-level-languages",
+      "name": "פעולות לוגיות סיביות וחוקי דה מורגן",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 7
+    },
+    {
+      "id": "low-level-bit-masks",
+      "courseId": "low-level-languages",
+      "name": "מסכות סיביות ובדיקת ביטים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 8
+    },
+    {
+      "id": "low-level-bit-rotation",
+      "courseId": "low-level-languages",
+      "name": "פעולות סיבוב CIL ו-CIR",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 9
+    },
+    {
+      "id": "low-level-booleans",
+      "courseId": "low-level-languages",
+      "name": "ייצוג משתנים בוליאניים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 10
+    },
+    {
+      "id": "low-level-loops",
+      "courseId": "low-level-languages",
+      "name": "לולאות ומבני חזרה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 11
+    },
+    {
+      "id": "low-level-arrays-pointers",
+      "courseId": "low-level-languages",
+      "name": "מערכים, כתובות ומצביעים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 12
+    },
+    {
+      "id": "low-level-array-algorithms",
+      "courseId": "low-level-languages",
+      "name": "מעבר ואלגוריתמים על מערכים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 13
+    },
+    {
+      "id": "low-level-two-dimensional-arrays",
+      "courseId": "low-level-languages",
+      "name": "מערכים דו-ממדיים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 14
+    },
+    {
+      "id": "low-level-subroutines",
+      "courseId": "low-level-languages",
+      "name": "תת-שגרות וקריאה באמצעות BSA",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 15
+    },
+    {
+      "id": "low-level-ac-parameters",
+      "courseId": "low-level-languages",
+      "name": "העברת פרמטר וערך חזרה דרך AC",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 16
+    },
+    {
+      "id": "low-level-stack",
+      "courseId": "low-level-languages",
+      "name": "מחסנית ופעולות PUSH ו-POP",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 17
+    },
+    {
+      "id": "low-level-stack-parameters",
+      "courseId": "low-level-languages",
+      "name": "העברת פרמטרים וערכי חזרה דרך המחסנית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 18
+    },
+    {
+      "id": "low-level-character-io",
+      "courseId": "low-level-languages",
+      "name": "קלט ופלט של תווים ו-ASCII",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 19
+    },
+    {
+      "id": "low-level-string-io",
+      "courseId": "low-level-languages",
+      "name": "קלט, פלט ופעולות על מחרוזות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 20
+    },
+    {
+      "id": "low-level-integer-io",
+      "courseId": "low-level-languages",
+      "name": "קלט ופלט של מספרים שלמים והמרה מ-ASCII",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 21
+    },
+    {
+      "id": "low-level-integer-division",
+      "courseId": "low-level-languages",
+      "name": "חילוק שלם באמצעות חיסור חוזר",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 22
+    },
+    {
+      "id": "low-level-base-io-conversion",
+      "courseId": "low-level-languages",
+      "name": "קלט, פלט והמרה בין בסיסי ספירה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 23
+    },
+    {
+      "id": "logic-first-order",
+      "courseId": "mathematical-logic",
+      "name": "לוגיקה מסדר ראשון - תחשיב היחסים",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-fol-basic-concepts",
+          "name": "קבועים, משתנים, יחסים ופונקציות",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-fol-quantifiers",
+          "name": "הכמת האוניברסלי והכמת הקיומי",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-fol-writing",
+          "name": "כתיבת משפטים בלוגיקה מסדר ראשון",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-fol-translation",
+          "name": "תרגום נוסחאות לעברית",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-fol-scope-meaning",
+          "name": "טווח כמתים והבדלי משמעות",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "logic-fol-equivalences",
+          "name": "שקילויות בסיסיות בתחשיב היחסים",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "logic-fol-equivalence-proofs",
+          "name": "הוכחת שקילויות",
+          "completed": false,
+          "position": 6
+        }
+      ],
+      "position": 0
+    },
+    {
+      "id": "logic-direct-proof",
+      "courseId": "mathematical-logic",
+      "name": "שיטות הוכחה",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-proof-inference-intro",
+          "name": "מבוא להיסק",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-proof-conditions",
+          "name": "תנאי מספיק, תנאי הכרחי ותנאי הכרחי ומספיק",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-proof-direct",
+          "name": "הוכחה ישירה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-proof-refutation",
+          "name": "הפרכה ודוגמה נגדית",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-proof-contrapositive",
+          "name": "הוכחה עקיפה (Contrapositive)",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "logic-proof-contradiction",
+          "name": "הוכחה בדרך השלילה",
+          "completed": false,
+          "position": 5
+        }
+      ],
+      "position": 1
+    },
+    {
+      "id": "logic-satisfiability",
+      "courseId": "mathematical-logic",
+      "name": "צורות נורמליות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-normal-tautology-contradiction",
+          "name": "טאוטולוגיה, סתירה ונוסחה כללית",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-normal-satisfiability",
+          "name": "סיפוק ואי-סיפוק נוסחאות",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-normal-dnf",
+          "name": "צורה נורמלית דיסיונקטיבית (DNF)",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-normal-cnf",
+          "name": "צורה נורמלית קוניונקטיבית (CNF)",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-normal-truth-table",
+          "name": "המרה לצורה נורמלית בעזרת טבלת אמת",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "logic-normal-algorithm",
+          "name": "המרה לצורה נורמלית בעזרת אלגוריתם וזהויות",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "logic-normal-full-partial",
+          "name": "צורות נורמליות מלאות ולא מלאות",
+          "completed": false,
+          "position": 6
+        }
+      ],
+      "position": 2
+    },
+    {
+      "id": "logic-semantic-tableaux",
+      "courseId": "mathematical-logic",
+      "name": "תבניות סמנטיות ורזולוציה",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-semantic-literals-clauses",
+          "name": "ליטרלים, זוגות משלימים ופסוקיות",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-semantic-tableau",
+          "name": "תבנית סמנטית על בסיס DNF",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-semantic-tableau-algorithm",
+          "name": "האלגוריתם לבניית תבנית סמנטית",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-semantic-resolution",
+          "name": "רזולוציה על בסיס CNF",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-semantic-reducing-resolution",
+          "name": "רזולוציה מצמצמת",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "logic-semantic-expanding-resolution",
+          "name": "רזולוציה מרחיבה",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "logic-semantic-satisfiability",
+          "name": "בדיקת סיפוק ואי-סיפוק באמצעות תבניות ורזולוציה",
+          "completed": false,
+          "position": 6
+        }
+      ],
+      "position": 3
+    },
+    {
+      "id": "logic-logical-consequence",
+      "courseId": "mathematical-logic",
+      "name": "גרירה לוגית",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-consequence-interpretation",
+          "name": "פרשנות ופרשנות חלקית",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-consequence-truth-value",
+          "name": "פונקציית ערך אמת תחת פרשנות",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-consequence-semantics",
+          "name": "סמנטיקה של נוסחאות",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-consequence-set-satisfaction",
+          "name": "סיפוק קבוצת נוסחאות",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-consequence-model",
+          "name": "מודל של נוסחה ושל קבוצת נוסחאות",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "logic-consequence-definition",
+          "name": "הגדרת גרירה לוגית והוכחות",
+          "completed": false,
+          "position": 5
+        }
+      ],
+      "position": 4
+    },
+    {
+      "id": "logic-propositional-inference",
+      "courseId": "mathematical-logic",
+      "name": "היסק בתחשיב הפסוקים",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-prop-inference-sat-tools",
+          "name": "שימוש באלגוריתמי סיפוק לצורך היסק",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-prop-inference-reducing",
+          "name": "רזולוציה מצמצמת וגרירה לוגית",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-prop-inference-expanding",
+          "name": "רזולוציה מרחיבה וגרירה לוגית",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-prop-inference-semantic",
+          "name": "תבניות סמנטיות ככלי היסק",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-prop-inference-prove-refute",
+          "name": "הוכחה והפרכה של טענות גרירה",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 5
+    },
+    {
+      "id": "logic-first-order-inference",
+      "courseId": "mathematical-logic",
+      "name": "היסק בתחשיב היחסים",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-fol-inference-reduction",
+          "name": "המרת בסיס ידע מתחשיב היחסים לתחשיב הפסוקים",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-fol-inference-substitution",
+          "name": "הצבה - החלפת משתנים בפרמטרים",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-fol-inference-unification",
+          "name": "יוניפיקציה - מציאת הצבות מאחדות",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-fol-inference-standardization",
+          "name": "סטנדרטיזציה של משתנים",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-fol-inference-cnf",
+          "name": "המרה ל-CNF, ביטול גרירות והכנסת שלילות",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "logic-fol-inference-skolemization",
+          "name": "סקולמיזציה והסרת הכמת הקיומי",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "logic-fol-inference-universal",
+          "name": "הסרת הכמת האוניברסלי",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "logic-fol-inference-resolution",
+          "name": "רזולוציה והיסק מבסיס ידע בלוגיקה מסדר ראשון",
+          "completed": false,
+          "position": 7
+        }
+      ],
+      "position": 6
+    },
+    {
+      "id": "logic-propositional-syntax",
+      "courseId": "mathematical-logic",
+      "name": "שפת תחשיב הפסוקים",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "logic-language-structural-induction",
+          "name": "אינדוקציה מבנית ומבנים אינדוקטיביים",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "logic-language-definition",
+          "name": "הגדרת שפת תחשיב הפסוקים באינדוקציה מבנית",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "logic-language-syntax",
+          "name": "פסוקים אטומיים, קשרים ותחביר נוסחאות",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "logic-language-trees",
+          "name": "עצי וסדרות בנייה וגזירה",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "logic-language-unique-readability",
+          "name": "קריאות יחידה",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "logic-language-notations",
+          "name": "כתיב תחילי (פולני) וכתיב סופי",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "logic-language-recursive-functions",
+          "name": "פונקציות רקורסיביות על מבנים",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "logic-language-truth-value",
+          "name": "פונקציית ערך אמת תחת פרשנות",
+          "completed": false,
+          "position": 7
+        },
+        {
+          "id": "logic-language-membership",
+          "name": "הוכחת שייכות ותכונות של פסוקים",
+          "completed": false,
+          "position": 8
+        },
+        {
+          "id": "logic-language-non-membership",
+          "name": "הפרכת שייכות באמצעות פונקציות רקורסיביות",
+          "completed": false,
+          "position": 9
+        }
+      ],
+      "position": 7
+    },
+    {
+      "id": "discrete-counting",
+      "courseId": "discrete-mathematics",
+      "name": "קומבינטוריקה: מנייה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 0,
+      "subtopics": [
+        {
+          "id": "discrete-counting-sum-rule",
+          "name": "עקרון הסכום",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-counting-product-rule",
+          "name": "עקרון המכפלה",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-counting-permutations",
+          "name": "תמורות וסידור בשורה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-counting-circular-permutations",
+          "name": "סידור במעגל",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-counting-ordered-selections",
+          "name": "סידור k מתוך n",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-counting-unordered-selections",
+          "name": "בחירה ללא סדר",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-counting-selections-with-repetition",
+          "name": "בחירה עם חזרות",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "discrete-counting-stars-and-bars",
+          "name": "כוכבים ומחיצות",
+          "completed": false,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": "discrete-set-theory-introduction",
+      "courseId": "discrete-mathematics",
+      "name": "תורת הקבוצות: מבוא",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 1,
+      "subtopics": [
+        {
+          "id": "discrete-set-theory-introduction-sets-and-membership",
+          "name": "איברים, שייכות והגדרת קבוצה",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-set-theory-introduction-number-and-special-sets",
+          "name": "קבוצות מספרים וקבוצות מיוחדות",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-set-theory-introduction-equality-and-inclusion",
+          "name": "שוויון, הכלה והכלה ממש",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-set-theory-introduction-set-operations",
+          "name": "איחוד, חיתוך, הפרש ומשלים",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-set-theory-introduction-set-identities",
+          "name": "הוכחת זהויות בין קבוצות",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-set-theory-introduction-power-set",
+          "name": "קבוצת החזקה",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-set-theory-introduction-ordered-pairs-cartesian-product",
+          "name": "זוגות סדורים ומכפלה קרטזית",
+          "completed": false,
+          "position": 6
+        }
+      ]
+    },
+    {
+      "id": "discrete-relations",
+      "courseId": "discrete-mathematics",
+      "name": "תורת הקבוצות: יחסים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 2,
+      "subtopics": [
+        {
+          "id": "discrete-relations-relation-definition",
+          "name": "הגדרת יחס",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-relations-relations-on-a-set",
+          "name": "יחסים על קבוצה",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-relations-special-relations",
+          "name": "יחסים מיוחדים",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-relations-relation-properties",
+          "name": "תכונות של יחסים",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-relations-inverse-relation",
+          "name": "יחס הופכי",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-relations-relation-composition",
+          "name": "הרכבת יחסים",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-relations-relation-operations-powers",
+          "name": "חזקות ופעולות על יחסים",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "discrete-relations-prove-or-disprove-properties",
+          "name": "הוכחה או הפרכה של תכונות יחס",
+          "completed": false,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": "discrete-equivalence-order-relations",
+      "courseId": "discrete-mathematics",
+      "name": "תורת הקבוצות: יחסי שקילות ויחסי סדר",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 3,
+      "subtopics": [
+        {
+          "id": "discrete-equivalence-order-relations-equivalence-relations",
+          "name": "זיהוי והוכחת יחס שקילות",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-equivalence-order-relations-equivalence-classes",
+          "name": "מחלקות שקילות",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-equivalence-order-relations-partitions",
+          "name": "חלוקה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-equivalence-order-relations-quotient-set",
+          "name": "קבוצת מנה",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-equivalence-order-relations-partition-equivalence-link",
+          "name": "הקשר בין חלוקה ליחס שקילות",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-equivalence-order-relations-partial-orders",
+          "name": "יחסי סדר חלקיים",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-equivalence-order-relations-strict-orders",
+          "name": "יחסי סדר חזקים",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "discrete-equivalence-order-relations-total-orders",
+          "name": "יחסי סדר מלאים",
+          "completed": false,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": "discrete-functions",
+      "courseId": "discrete-mathematics",
+      "name": "תורת הקבוצות: פונקציות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 4,
+      "subtopics": [
+        {
+          "id": "discrete-functions-function-definition",
+          "name": "הגדרת פונקציה, קיום ויחידות",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-functions-well-defined-functions",
+          "name": "פונקציה מוגדרת היטב",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-functions-domain-range-image",
+          "name": "מקור, טווח ותמונה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-functions-injective-functions",
+          "name": "פונקציה חד-חד-ערכית",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-functions-surjective-functions",
+          "name": "פונקציה על",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-functions-bijective-functions",
+          "name": "פונקציה הפיכה",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-functions-function-composition",
+          "name": "הרכבת פונקציות",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "discrete-functions-inverse-functions",
+          "name": "הפיכת פונקציות והרכבת פונקציות הפיכות",
+          "completed": false,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": "discrete-infinite-sets",
+      "courseId": "discrete-mathematics",
+      "name": "תורת הקבוצות: קבוצות אינסופיות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 5,
+      "subtopics": [
+        {
+          "id": "discrete-infinite-sets-finite-infinite-sets",
+          "name": "קבוצות סופיות ואינסופיות",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-infinite-sets-cardinality-equivalence",
+          "name": "שקילות עוצמות באמצעות פונקציות",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-infinite-sets-cantor-schroeder-bernstein",
+          "name": "משפט קנטור-שרדר-ברנשטיין",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-infinite-sets-countable-sets",
+          "name": "קבוצות בנות מנייה",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-infinite-sets-natural-integer-rational-cardinality",
+          "name": "עוצמות הטבעיים, השלמים והרציונליים",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-infinite-sets-uncountable-sets",
+          "name": "קבוצות שאינן בנות מנייה",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-infinite-sets-cantor-diagonal",
+          "name": "האלכסון של קנטור",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "discrete-infinite-sets-power-set-cardinality",
+          "name": "קבוצת החזקה וגדלים אינסופיים שונים",
+          "completed": false,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": "discrete-induction",
+      "courseId": "discrete-mathematics",
+      "name": "אינדוקציה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 6,
+      "subtopics": [
+        {
+          "id": "discrete-induction-induction-principle",
+          "name": "עקרון האינדוקציה",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-induction-base-hypothesis-step",
+          "name": "בסיס, הנחה וצעד",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-induction-induction-proofs",
+          "name": "כתיבת הוכחה באינדוקציה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-induction-strong-induction",
+          "name": "אינדוקציה מלאה",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-induction-induction-errors",
+          "name": "זיהוי שגיאות בהוכחות",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-induction-inductive-structures",
+          "name": "הגדרת מבנים אינדוקטיביים",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-induction-structural-induction",
+          "name": "אינדוקציה מבנית",
+          "completed": false,
+          "position": 6
+        },
+        {
+          "id": "discrete-induction-inductive-structure-proofs",
+          "name": "הוכחת תכונות של מבנים אינדוקטיביים",
+          "completed": false,
+          "position": 7
+        }
+      ]
+    },
+    {
+      "id": "discrete-recursion",
+      "courseId": "discrete-mathematics",
+      "name": "רקורסיה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 7,
+      "subtopics": [
+        {
+          "id": "discrete-recursion-recursive-functions",
+          "name": "פונקציות רקורסיביות",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-recursion-base-and-recursive-rule",
+          "name": "תנאי בסיס וכלל רקורסיבי",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-recursion-recursive-inductive-structures",
+          "name": "פונקציות על מבנים אינדוקטיביים",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-recursion-recursive-function-proofs",
+          "name": "הוכחת תכונות של פונקציות רקורסיביות",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-recursion-recurrence-relations",
+          "name": "נוסחאות נסיגה",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-recursion-explicit-vs-recurrence",
+          "name": "נוסחה מפורשת מול נוסחת נסיגה",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-recursion-euclidean-algorithm",
+          "name": "אלגוריתם אוקלידס ומחלק משותף מקסימלי",
+          "completed": false,
+          "position": 6
+        }
+      ]
+    },
+    {
+      "id": "discrete-binomial",
+      "courseId": "discrete-mathematics",
+      "name": "קומבינטוריקה: בינומית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 8,
+      "subtopics": [
+        {
+          "id": "discrete-binomial-binomial-coefficients",
+          "name": "מקדמים בינומיים",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-binomial-pascal-identity-triangle",
+          "name": "זהות ומשולש פסקל",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-binomial-algebraic-proofs",
+          "name": "הוכחות אלגבריות לזהויות",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-binomial-combinatorial-proofs",
+          "name": "הוכחות קומבינטוריות לזהויות",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "discrete-binomial-newton-binomial",
+          "name": "הבינום של ניוטון",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "discrete-binomial-coefficient-extraction",
+          "name": "מציאת מקדם בפיתוח",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "discrete-binomial-binomial-identities",
+          "name": "זהויות בינומיות",
+          "completed": false,
+          "position": 6
+        }
+      ]
+    },
+    {
+      "id": "discrete-combinatorial-principles",
+      "courseId": "discrete-mathematics",
+      "name": "קומבינטוריקה: עקרונות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 9,
+      "subtopics": [
+        {
+          "id": "discrete-combinatorial-principles-inclusion-exclusion",
+          "name": "עקרון ההכלה וההפרדה",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "discrete-combinatorial-principles-generalized-inclusion-exclusion",
+          "name": "הכללה למספר קבוצות",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "discrete-combinatorial-principles-counting-applications",
+          "name": "פתרון בעיות מנייה באמצעות העיקרון",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "discrete-combinatorial-principles-bounded-integer-solutions",
+          "name": "פתרונות שלמים עם מגבלות",
+          "completed": false,
+          "position": 3
+        }
+      ]
+    },
+    {
+      "id": "programming-c-structure",
+      "courseId": "programming-2",
+      "name": "חזרה על יסודות שפת C",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-c-program-structure",
+          "name": "מבנה תוכנית ופונקציית main",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-c-types-variables",
+          "name": "טיפוסים, משתנים וקבועים",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-c-control-flow",
+          "name": "תנאים ולולאות",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-c-functions",
+          "name": "פונקציות והעברת פרמטרים",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-c-arrays",
+          "name": "מערכים",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "programming-c-strings",
+          "name": "מחרוזות ומערכי תווים",
+          "completed": false,
+          "position": 5
+        }
+      ],
+      "position": 0
+    },
+    {
+      "id": "programming-pointers",
+      "courseId": "programming-2",
+      "name": "מצביעים וכתובות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-pointers-addresses",
+          "name": "כתובות בזיכרון והאופרטור &",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-pointers-definition",
+          "name": "הגדרה ואתחול של מצביעים",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-pointers-dereference",
+          "name": "גישה לערך באמצעות האופרטור *",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-pointers-functions",
+          "name": "העברת מצביעים לפונקציות",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-pointers-arrays",
+          "name": "הקשר בין מצביעים למערכים",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "programming-pointers-arithmetic",
+          "name": "אריתמטיקה של מצביעים",
+          "completed": false,
+          "position": 5
+        }
+      ],
+      "position": 1
+    },
+    {
+      "id": "programming-structures",
+      "courseId": "programming-2",
+      "name": "מבנים (struct)",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-struct-definition",
+          "name": "הגדרה ואתחול של struct",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-struct-members",
+          "name": "גישה לשדות באמצעות .",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-struct-pointers",
+          "name": "מצביעים למבנים והאופרטור ->",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-struct-arrays",
+          "name": "מערכים של מבנים",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-struct-typedef",
+          "name": "הגדרת טיפוס מבנה באמצעות typedef",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 2
+    },
+    {
+      "id": "programming-function-pointers",
+      "courseId": "programming-2",
+      "name": "תכנות מתקדם בשפת C",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-advanced-preprocessor",
+          "name": "הקדם-מעבד, define ומאקרואים",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-advanced-enum-typedef",
+          "name": "טיפוסים מותאמים עם enum ו-typedef",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-advanced-function-pointers",
+          "name": "מצביעים לפונקציות",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-advanced-callbacks",
+          "name": "פונקציות callback",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-advanced-command-line",
+          "name": "ארגומנטים משורת הפקודה",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 3
+    },
+    {
+      "id": "programming-text-files",
+      "courseId": "programming-2",
+      "name": "קבצים",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-files-streams",
+          "name": "זרמי קבצים והטיפוס FILE",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-files-open-close",
+          "name": "פתיחה וסגירה באמצעות fopen ו-fclose",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-files-modes",
+          "name": "מצבי פתיחה לקריאה, כתיבה והוספה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-files-formatted-io",
+          "name": "קלט ופלט מעוצב עם fprintf ו-fscanf",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-files-binary-io",
+          "name": "קריאה וכתיבה של קבצים בינאריים",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "programming-files-errors",
+          "name": "בדיקת שגיאות וסוף קובץ",
+          "completed": false,
+          "position": 5
+        }
+      ],
+      "position": 4
+    },
+    {
+      "id": "programming-dynamic-allocation",
+      "courseId": "programming-2",
+      "name": "הקצאת זיכרון דינמית ומבנה הזיכרון",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-memory-layout",
+          "name": "מבנה הזיכרון: stack, heap ואזורים סטטיים",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-memory-malloc-calloc",
+          "name": "הקצאה באמצעות malloc ו-calloc",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-memory-realloc",
+          "name": "שינוי גודל הקצאה באמצעות realloc",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-memory-free",
+          "name": "שחרור זיכרון באמצעות free",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-memory-dynamic-arrays",
+          "name": "מערכים דינמיים ומצביעים",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "programming-memory-leaks-dangling",
+          "name": "דליפות זיכרון ומצביעים תלויים",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "programming-memory-invalid-access",
+          "name": "גישות לא חוקיות לזיכרון ו-segmentation fault",
+          "completed": false,
+          "position": 6
+        }
+      ],
+      "position": 5
+    },
+    {
+      "id": "programming-linked-nodes",
+      "courseId": "programming-2",
+      "name": "רשימות מקושרות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-lists-node",
+          "name": "מבנה צומת והמצביע לצומת הבא",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-lists-create",
+          "name": "יצירת רשימה וצמתים",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-lists-traversal",
+          "name": "מעבר על רשימה וחיפוש",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-lists-insertion",
+          "name": "הכנסה בתחילת הרשימה, בסופה ובאמצע",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-lists-deletion",
+          "name": "מחיקת צומת מרשימה",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "programming-lists-empty",
+          "name": "טיפול ברשימה ריקה ובמקרי קצה",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "programming-lists-free",
+          "name": "שחרור הזיכרון של הרשימה",
+          "completed": false,
+          "position": 6
+        }
+      ],
+      "position": 6
+    },
+    {
+      "id": "programming-modules",
+      "courseId": "programming-2",
+      "name": "מודולריות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-modules-header-source",
+          "name": "קובצי כותרת וקובצי מימוש",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-modules-interface",
+          "name": "הפרדה בין ממשק למימוש",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-modules-include-guards",
+          "name": "Include guards ומניעת הכללה כפולה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-modules-separate-compilation",
+          "name": "קומפילציה נפרדת וקישור",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-modules-dependencies",
+          "name": "ניהול תלויות בין מודולים",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 7
+    },
+    {
+      "id": "programming-adt",
+      "courseId": "programming-2",
+      "name": "טיפוס נתונים מופשט (ADT)",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-adt-concept",
+          "name": "עקרונות של טיפוס נתונים מופשט",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-adt-interface",
+          "name": "הגדרת ממשק ופעולות",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-adt-implementation",
+          "name": "מימוש פנימי והסתרת מידע",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-adt-encapsulation",
+          "name": "כימוס והגנה על תקינות הנתונים",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-adt-c",
+          "name": "מימוש ADT בשפת C",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 8
+    },
+    {
+      "id": "programming-generic-adt",
+      "courseId": "programming-2",
+      "name": "ADT גנרי",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-generic-void-pointer",
+          "name": "נתונים גנריים באמצעות void*",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-generic-element-size",
+          "name": "גודל איבר והעתקת נתונים",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-generic-function-pointers",
+          "name": "מצביעים לפונקציות כפרמטרים",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-generic-memory",
+          "name": "ניהול זיכרון ב-ADT גנרי",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-generic-comparison",
+          "name": "פונקציות השוואה ושחרור מותאמות",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "programming-generic-set",
+          "name": "מימוש Set גנרי",
+          "completed": false,
+          "position": 5
+        }
+      ],
+      "position": 9
+    },
+    {
+      "id": "programming-cpp-adt",
+      "courseId": "programming-2",
+      "name": "מבוא ל-C++ ויישום ADT",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "programming-cpp-differences",
+          "name": "הבדלים בסיסיים בין C ל-C++",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "programming-cpp-classes-objects",
+          "name": "מחלקות ואובייקטים",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "programming-cpp-access",
+          "name": "שדות, מתודות והרשאות גישה",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "programming-cpp-constructors",
+          "name": "בנאים ומאתחלים",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "programming-cpp-destructors",
+          "name": "הורסים וניהול משאבים",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "programming-cpp-new-delete",
+          "name": "הקצאה ושחרור באמצעות new ו-delete",
+          "completed": false,
+          "position": 5
+        },
+        {
+          "id": "programming-cpp-adt-implementation",
+          "name": "מימוש ADT באמצעות מחלקה",
+          "completed": false,
+          "position": 6
+        }
+      ],
+      "position": 10
+    },
+    {
+      "id": "linear-systems",
+      "courseId": "linear-algebra",
+      "name": "מערכות משוואות לינאריות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "linear-systems-gauss",
+          "name": "אלימינציה בשיטת גאוס וגאוס־ז'ורדן",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "linear-systems-parameters",
+          "name": "פתרון עם פרמטרים (a, k, t)",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "linear-systems-solution-states",
+          "name": "מצבי פתרון (יחיד, אינסוף או אין פתרון)",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "linear-systems-homogeneous",
+          "name": "מערכות הומוגניות ופתרון טריוויאלי",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "linear-systems-free-variables",
+          "name": "משתנים חופשיים ומרחב הפתרונות",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 0
+    },
+    {
+      "id": "linear-matrix-operations",
+      "courseId": "linear-algebra",
+      "name": "מטריצות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "linear-matrices-operations",
+          "name": "פעולות על מטריצות (כפל, חיבור ושחלוף)",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "linear-matrices-inverse",
+          "name": "חישוב מטריצה הפוכה (A⁻¹)",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "linear-matrices-equations",
+          "name": "משוואות מטריציוניות (AX=B, YA=C)",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "linear-matrices-elementary",
+          "name": "מטריצות אלמנטריות (E1, E2, E3)",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "linear-matrices-adjoint",
+          "name": "מטריצה מצורפת (adj A)",
+          "completed": false,
+          "position": 4
+        },
+        {
+          "id": "linear-matrices-properties",
+          "name": "תכונות מטריצות והוכחות",
+          "completed": false,
+          "position": 5
+        }
+      ],
+      "position": 1
+    },
+    {
+      "id": "linear-determinants",
+      "courseId": "linear-algebra",
+      "name": "דטרמיננטות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "linear-determinants-calculation",
+          "name": "שיטות חישוב (פיתוח ופעולות שורה)",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "linear-determinants-properties",
+          "name": "תכונות הדטרמיננטה",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "linear-determinants-cramer",
+          "name": "כלל קרמר",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "linear-determinants-invertibility",
+          "name": "תנאי הפיכות (det A ≠ 0)",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "linear-determinants-vandermonde",
+          "name": "מטריצת ונדרמונד",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 2
+    },
+    {
+      "id": "linear-vector-spaces",
+      "courseId": "linear-algebra",
+      "name": "מרחבים וקטוריים",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "linear-vector-subspaces-span",
+          "name": "תת־מרחבים וקבוצות פורשות (Span)",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "linear-vector-independence",
+          "name": "אי־תלות לינארית",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "linear-vector-basis-dimension",
+          "name": "בסיס וממד",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "linear-vector-coordinates",
+          "name": "קואורדינטות ווקטורי עמודה",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "linear-vector-change-basis",
+          "name": "החלפת בסיס ומטריצות מעבר",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 3
+    },
+    {
+      "id": "linear-transformations",
+      "courseId": "linear-algebra",
+      "name": "העתקות לינאריות",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "linear-transformations-linearity",
+          "name": "תנאים ללינאריות",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "linear-transformations-kernel",
+          "name": "גרעין (Ker T)",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "linear-transformations-range",
+          "name": "טווח ותמונה (Im T)",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "linear-transformations-standard-matrix",
+          "name": "ייצוג מטריציוני סטנדרטי",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "linear-transformations-rank-nullity",
+          "name": "משפט הדרגה והגרעין (Rank–Nullity)",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 4
+    },
+    {
+      "id": "linear-diagonalization",
+      "courseId": "linear-algebra",
+      "name": "ערכים עצמיים ולכסון",
+      "level": "not-started",
+      "importance": "normal",
+      "subtopics": [
+        {
+          "id": "linear-eigen-characteristic-polynomial",
+          "name": "פולינום אופייני",
+          "completed": false,
+          "position": 0
+        },
+        {
+          "id": "linear-eigenvalues",
+          "name": "מציאת ערכים עצמיים",
+          "completed": false,
+          "position": 1
+        },
+        {
+          "id": "linear-eigenvectors-eigenspaces",
+          "name": "וקטורים עצמיים ומרחבים עצמיים",
+          "completed": false,
+          "position": 2
+        },
+        {
+          "id": "linear-diagonalization-p-d",
+          "name": "לכסון (מטריצות P ו־D)",
+          "completed": false,
+          "position": 3
+        },
+        {
+          "id": "linear-diagonalization-powers",
+          "name": "חזקות של מטריצה באמצעות לכסון",
+          "completed": false,
+          "position": 4
+        }
+      ],
+      "position": 5
+    },
+    {
+      "id": "stats-variable-types",
+      "courseId": "probability-statistics",
+      "name": "סיווג משתנים וסולמות מדידה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 0
+    },
+    {
+      "id": "stats-frequency-tables",
+      "courseId": "probability-statistics",
+      "name": "הצגת נתונים בטבלת שכיחות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 1
+    },
+    {
+      "id": "stats-central-tendency",
+      "courseId": "probability-statistics",
+      "name": "מדדי מיקום מרכזי: שכיח, חציון וממוצע",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 2
+    },
+    {
+      "id": "stats-variance-standard-deviation",
+      "courseId": "probability-statistics",
+      "name": "מדדי פיזור: סטיית תקן ושונות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 3
+    },
+    {
+      "id": "stats-range-iqr",
+      "courseId": "probability-statistics",
+      "name": "טווח בין-רבעוני",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 4
+    },
+    {
+      "id": "stats-linear-transformations",
+      "courseId": "probability-statistics",
+      "name": "השפעת טרנספורמציה לינארית על מדדים",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 5
+    },
+    {
+      "id": "stats-correlation",
+      "courseId": "probability-statistics",
+      "name": "מתאם",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 6
+    },
+    {
+      "id": "stats-regression",
+      "courseId": "probability-statistics",
+      "name": "רגרסיה לינארית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 7
+    },
+    {
+      "id": "stats-probability-basics",
+      "courseId": "probability-statistics",
+      "name": "מושגי יסוד בהסתברות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 8
+    },
+    {
+      "id": "stats-combinatorics",
+      "courseId": "probability-statistics",
+      "name": "קומבינטוריקה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 9
+    },
+    {
+      "id": "stats-conditional-probability",
+      "courseId": "probability-statistics",
+      "name": "הסתברות מותנית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 10
+    },
+    {
+      "id": "stats-probability-functions",
+      "courseId": "probability-statistics",
+      "name": "פונקציית ההסתברות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 11
+    },
+    {
+      "id": "stats-discrete-uniform",
+      "courseId": "probability-statistics",
+      "name": "התפלגות אחידה בדידה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 12
+    },
+    {
+      "id": "stats-binomial",
+      "courseId": "probability-statistics",
+      "name": "התפלגות בינומית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 13
+    },
+    {
+      "id": "stats-geometric",
+      "courseId": "probability-statistics",
+      "name": "התפלגות גאומטרית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 14
+    },
+    {
+      "id": "stats-hypergeometric",
+      "courseId": "probability-statistics",
+      "name": "התפלגות היפרגאומטרית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 15
+    },
+    {
+      "id": "stats-poisson",
+      "courseId": "probability-statistics",
+      "name": "התפלגות פואסונית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 16
+    },
+    {
+      "id": "stats-exponential",
+      "courseId": "probability-statistics",
+      "name": "התפלגות מעריכית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 17
+    },
+    {
+      "id": "stats-normal",
+      "courseId": "probability-statistics",
+      "name": "התפלגות נורמלית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 18
+    },
+    {
+      "id": "stats-normal-approximation",
+      "courseId": "probability-statistics",
+      "name": "קירוב נורמלי להתפלגות בינומית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 19
+    },
+    {
+      "id": "stats-populations-samples",
+      "courseId": "probability-statistics",
+      "name": "מושגי יסוד בהסקה סטטיסטית",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 20
+    },
+    {
+      "id": "stats-sampling-distributions",
+      "courseId": "probability-statistics",
+      "name": "התפלגות הדגימה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 21
+    },
+    {
+      "id": "stats-clt",
+      "courseId": "probability-statistics",
+      "name": "משפט הגבול המרכזי",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 22
+    },
+    {
+      "id": "stats-ci-mean",
+      "courseId": "probability-statistics",
+      "name": "רווח סמך לתוחלת",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 23
+    },
+    {
+      "id": "stats-ci-proportion",
+      "courseId": "probability-statistics",
+      "name": "רווח סמך לפרופורציה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 24
+    },
+    {
+      "id": "stats-ci-mean-difference",
+      "courseId": "probability-statistics",
+      "name": "רווח סמך להפרש תוחלות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 25
+    },
+    {
+      "id": "stats-hypothesis-testing",
+      "courseId": "probability-statistics",
+      "name": "בדיקת השערות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 26
+    },
+    {
+      "id": "stats-test-mean",
+      "courseId": "probability-statistics",
+      "name": "בדיקת השערות על תוחלת",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 27
+    },
+    {
+      "id": "stats-test-proportion",
+      "courseId": "probability-statistics",
+      "name": "בדיקת השערות על פרופורציה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 28
+    },
+    {
+      "id": "stats-test-mean-difference",
+      "courseId": "probability-statistics",
+      "name": "בדיקת השערות על הפרש תוחלות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 29
+    },
+    {
+      "id": "stats-chi-square-fit",
+      "courseId": "probability-statistics",
+      "name": "מבחן חי בריבוע לטיב התאמה",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 30
+    },
+    {
+      "id": "stats-chi-square-independence",
+      "courseId": "probability-statistics",
+      "name": "מבחן חי בריבוע לאי תלות",
+      "level": "not-started",
+      "importance": "normal",
+      "position": 31
+    }
   ]
 }

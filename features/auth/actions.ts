@@ -19,7 +19,7 @@ export async function loginAction(
     typeof password !== "string" ||
     !passwordsMatch(password, configuredPassword)
   ) {
-    return { error: "Invalid password" };
+    return { error: "סיסמה שגויה" };
   }
 
   await setSessionCookie();

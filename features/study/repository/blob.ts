@@ -1,6 +1,7 @@
 import {
   BlobPreconditionFailedError,
   get,
+  head,
   put,
 } from "@vercel/blob";
 
@@ -16,12 +17,17 @@ export function createBlobStudyRepository(): StudyRepository {
         access: "private",
         useCache: false,
       });
-      if (!result) return null;
+      if (!result || result.statusCode !== 200) return null;
 
       const text = await new Response(result.stream).text();
+      // The etag from `get` (a CDN/download response for a private blob) is not
+      // the canonical storage etag that `put({ ifMatch })` validates against.
+      // Use `head` so the version we hand back matches what a conditional write
+      // expects — otherwise every overwrite fails with a spurious conflict.
+      const meta = await head(pathname);
       return {
         data: studyDataSchema.parse(JSON.parse(text)),
-        version: result.blob.etag,
+        version: meta.etag,
       };
     },
 

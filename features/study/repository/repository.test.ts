@@ -41,6 +41,101 @@ describe("study repository orchestration", () => {
     expect(repository.writes).toHaveLength(0);
   });
 
+  it("adds seeded subtopics to an existing stored topic", async () => {
+    const withoutSubtopics = {
+      ...seed,
+      topics: seed.topics.map((topic) =>
+        topic.id === "discrete-relations" ? { ...topic, subtopics: [] } : topic,
+      ),
+    };
+    const repository = fakeRepository({
+      data: withoutSubtopics,
+      version: "etag-1",
+    });
+
+    const result = await readStudyDataWith(repository);
+
+    expect(
+      result.topics.find((topic) => topic.id === "discrete-relations")
+        ?.subtopics.length,
+    ).toBeGreaterThan(0);
+  });
+
+  it("replaces an older managed catalog and preserves matching progress", async () => {
+    const stored = {
+      ...seed,
+      topics: [
+        ...seed.topics.filter(
+          (topic) => topic.courseId !== "linear-algebra",
+        ),
+        {
+          id: "linear-systems",
+          courseId: "linear-algebra",
+          name: "שם ישן",
+          level: "weak" as const,
+          importance: "high" as const,
+          subtopics: [],
+          position: 0,
+        },
+        {
+          id: "linear-obsolete",
+          courseId: "linear-algebra",
+          name: "נושא ישן",
+          level: "not-started" as const,
+          importance: "normal" as const,
+          subtopics: [],
+          position: 1,
+        },
+      ],
+    };
+    const repository = fakeRepository({ data: stored, version: "etag-1" });
+
+    const result = await readStudyDataWith(repository);
+    const linearTopics = result.topics.filter(
+      (topic) => topic.courseId === "linear-algebra",
+    );
+    const systems = linearTopics.find(
+      (topic) => topic.id === "linear-systems",
+    );
+
+    expect(linearTopics).toHaveLength(6);
+    expect(linearTopics.some((topic) => topic.id === "linear-obsolete")).toBe(
+      false,
+    );
+    expect(systems).toMatchObject({
+      name: "מערכות משוואות לינאריות",
+      level: "weak",
+      importance: "high",
+    });
+    expect(systems?.subtopics).toHaveLength(5);
+  });
+
+  it("uses the seeded topic hierarchy for mathematical logic", async () => {
+    const repository = fakeRepository({ data: seed, version: "etag-1" });
+
+    const result = await readStudyDataWith(repository);
+    const logicTopics = result.topics.filter(
+      (topic) => topic.courseId === "mathematical-logic",
+    );
+
+    expect(logicTopics).toHaveLength(8);
+    expect(logicTopics.every((topic) => topic.subtopics.length > 0)).toBe(true);
+  });
+
+  it("uses the seeded topic hierarchy for programming", async () => {
+    const repository = fakeRepository({ data: seed, version: "etag-1" });
+
+    const result = await readStudyDataWith(repository);
+    const programmingTopics = result.topics.filter(
+      (topic) => topic.courseId === "programming-2",
+    );
+
+    expect(programmingTopics).toHaveLength(11);
+    expect(programmingTopics.every((topic) => topic.subtopics.length > 0)).toBe(
+      true,
+    );
+  });
+
   it("updates and validates the complete document", async () => {
     const repository = fakeRepository({ data: seed, version: "etag-1" });
     const now = new Date("2026-06-21T10:00:00.000Z");
@@ -50,7 +145,7 @@ describe("study repository orchestration", () => {
       (data) => ({
         ...data,
         topics: data.topics.map((topic) =>
-          topic.id === "logic-truth-tables"
+          topic.id === "logic-satisfiability"
             ? { ...topic, level: "strong" as const }
             : topic,
         ),
@@ -59,7 +154,7 @@ describe("study repository orchestration", () => {
     );
 
     expect(
-      result.data.topics.find((topic) => topic.id === "logic-truth-tables")
+      result.data.topics.find((topic) => topic.id === "logic-satisfiability")
         ?.level,
     ).toBe("strong");
     expect(result.data.updatedAt).toBe(now.toISOString());

@@ -18,6 +18,13 @@ export const courseSchema = z.object({
   position: z.number().int().nonnegative(),
 });
 
+export const subtopicSchema = z.object({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  completed: z.boolean(),
+  position: z.number().int().nonnegative(),
+});
+
 export const topicSchema = z.object({
   id: z.string().min(1),
   courseId: z.string().min(1),
@@ -26,6 +33,7 @@ export const topicSchema = z.object({
   importance: importanceSchema,
   lastStudiedAt: z.iso.datetime({ offset: true }).optional(),
   nextAction: z.string().trim().max(120).optional(),
+  subtopics: z.array(subtopicSchema).default([]),
   position: z.number().int().nonnegative(),
 });
 
@@ -53,5 +61,6 @@ export const studyDataSchema = z
 export type StudyData = z.infer<typeof studyDataSchema>;
 export type Course = z.infer<typeof courseSchema>;
 export type Topic = z.infer<typeof topicSchema>;
+export type Subtopic = z.infer<typeof subtopicSchema>;
 export type TopicLevel = z.infer<typeof topicLevelSchema>;
 export type Importance = z.infer<typeof importanceSchema>;
