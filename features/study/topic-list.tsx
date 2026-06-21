@@ -1,7 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { BookOpenIcon, FunnelIcon } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
 import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import {
@@ -10,13 +12,22 @@ import {
   SelectGroup,
   SelectItem,
   SelectTrigger,
-  SelectValue,
 } from "@/components/ui/select";
 
 import type { Course, Topic, TopicLevel } from "./model";
 import { TopicChecklistRow } from "./topic-checklist-row";
 
 type LevelFilter = TopicLevel | "all";
+
+// Render labels from state instead of <SelectValue/>, which doesn't reliably
+// paint a controlled initial value until its portalled items have mounted.
+const levelLabels: Record<LevelFilter, string> = {
+  all: "כל הרמות",
+  "not-started": "טרם התחיל",
+  weak: "חלש",
+  learning: "בלמידה",
+  strong: "חזק",
+};
 
 export function TopicList({ topics, courses }: { topics: Topic[]; courses: Course[] }) {
   const [query, setQuery] = useState("");
@@ -30,8 +41,16 @@ export function TopicList({ topics, courses }: { topics: Topic[]; courses: Cours
     (level === "all" || topic.level === level),
   );
 
+  const filtersActive = query !== "" || courseId !== "all" || level !== "all";
+
+  function clearFilters() {
+    setQuery("");
+    setCourseId("all");
+    setLevel("all");
+  }
+
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4">
       <FieldGroup className="grid gap-3 sm:grid-cols-[minmax(12rem,1fr)_12rem_10rem]">
         <Field>
           <FieldLabel htmlFor="topic-search" className="sr-only">חיפוש נושאים</FieldLabel>
@@ -40,7 +59,12 @@ export function TopicList({ topics, courses }: { topics: Topic[]; courses: Cours
         <Field>
           <FieldLabel htmlFor="course-filter" className="sr-only">קורס</FieldLabel>
           <Select value={courseId} onValueChange={setCourseId}>
-            <SelectTrigger id="course-filter"><SelectValue /></SelectTrigger>
+            <SelectTrigger id="course-filter" className="w-full">
+              <BookOpenIcon className="text-muted-foreground" />
+              <span className="line-clamp-1 flex-1 text-start">
+                {courseId === "all" ? "כל הקורסים" : courseById.get(courseId)?.shortName}
+              </span>
+            </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 <SelectItem value="all">כל הקורסים</SelectItem>
@@ -52,7 +76,10 @@ export function TopicList({ topics, courses }: { topics: Topic[]; courses: Cours
         <Field>
           <FieldLabel htmlFor="level-filter" className="sr-only">רמה</FieldLabel>
           <Select value={level} onValueChange={(value) => setLevel(value as LevelFilter)}>
-            <SelectTrigger id="level-filter"><SelectValue /></SelectTrigger>
+            <SelectTrigger id="level-filter" className="w-full">
+              <FunnelIcon className="text-muted-foreground" />
+              <span className="line-clamp-1 flex-1 text-start">{levelLabels[level]}</span>
+            </SelectTrigger>
             <SelectContent>
               <SelectGroup>
                 <SelectItem value="all">כל הרמות</SelectItem>
@@ -65,6 +92,15 @@ export function TopicList({ topics, courses }: { topics: Topic[]; courses: Cours
           </Select>
         </Field>
       </FieldGroup>
+
+      {filtersActive && (
+        <div className="flex items-center justify-between gap-3 text-sm text-muted-foreground">
+          <span className="tabular-nums">{visible.length} נושאים</span>
+          <Button variant="ghost" size="sm" onClick={clearFilters}>
+            ניקוי סינון
+          </Button>
+        </div>
+      )}
 
       <div>
         {visible.length === 0 ? (

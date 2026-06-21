@@ -1,7 +1,15 @@
+import { cn } from "@/lib/utils";
+
 import type { Course, Topic } from "./model";
-import { daysUntil } from "./format";
+import { daysUntil, examUrgency } from "./format";
 import { LevelMenu } from "./level-menu";
 import { TopicEditor } from "./topic-editor";
+
+const urgencyTone: Record<ReturnType<typeof examUrgency>, string> = {
+  urgent: "text-destructive font-medium",
+  soon: "text-status-weak font-medium",
+  normal: "",
+};
 
 export function RecommendedTopics({
   topics,
@@ -23,6 +31,8 @@ export function RecommendedTopics({
       <div className="divide-y">
         {topics.map((topic) => {
           const course = courseById.get(topic.courseId);
+          const days = course ? daysUntil(course.examAt) : null;
+          const tone = days === null ? "" : urgencyTone[examUrgency(days)];
           return (
             <div
               key={topic.id}
@@ -31,15 +41,18 @@ export function RecommendedTopics({
               <div className="min-w-0">
                 <TopicEditor topic={topic} />
                 <p className="mt-1 truncate text-xs text-muted-foreground sm:hidden">
-                  {course?.shortName} · {course ? `${daysUntil(course.examAt)} ימים` : ""}
+                  {course?.shortName}
+                  {days !== null && (
+                    <> · <span className={tone}>{`${days} ימים`}</span></>
+                  )}
                 </p>
               </div>
               <span className="hidden truncate text-sm text-muted-foreground sm:block">
                 {course?.shortName}
               </span>
               <span className="hidden sm:block"><LevelMenu topicId={topic.id} level={topic.level} /></span>
-              <span className="hidden text-center text-sm tabular-nums sm:block">
-                {course ? daysUntil(course.examAt) : "—"}
+              <span className={cn("hidden text-center text-sm tabular-nums sm:block", tone)}>
+                {days ?? "—"}
               </span>
             </div>
           );

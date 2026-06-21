@@ -2,7 +2,6 @@
 
 import { ChevronDownIcon } from "lucide-react";
 
-import { badgeVariants } from "@/components/ui/badge";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,6 +28,14 @@ const tones: Record<TopicLevel, string> = {
   strong: "bg-status-strong",
 };
 
+// Colored pill so the level reads at a glance; not-started stays quiet.
+const pillTones: Record<TopicLevel, string> = {
+  "not-started": "bg-muted text-muted-foreground hover:bg-muted/70",
+  weak: "bg-status-weak/10 text-status-weak hover:bg-status-weak/15",
+  learning: "bg-status-learning/10 text-status-learning hover:bg-status-learning/15",
+  strong: "bg-status-strong/10 text-status-strong hover:bg-status-strong/15",
+};
+
 const order: TopicLevel[] = ["not-started", "weak", "learning", "strong"];
 
 export function LevelMenu({
@@ -52,13 +59,12 @@ export function LevelMenu({
           type="button"
           aria-label={`רמה: ${labels[level]}`}
           className={cn(
-            badgeVariants({ variant: "ghost" }),
-            "gap-2 px-1 text-muted-foreground",
+            "inline-flex h-6 w-fit shrink-0 items-center gap-1 rounded-2xl ps-2 pe-1.5 text-xs font-medium whitespace-nowrap outline-none transition-colors focus-visible:ring-[3px] focus-visible:ring-ring/40",
+            pillTones[level],
           )}
         >
-          <span aria-hidden className={cn("size-2 rounded-full", tones[level])} />
           {labels[level]}
-          <ChevronDownIcon className="text-muted-foreground" />
+          <ChevronDownIcon className="size-3.5 opacity-60" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="min-w-40">
