@@ -15,10 +15,10 @@ import type { TopicLevel } from "./model";
 import { useStudy } from "./study-store";
 
 const labels: Record<TopicLevel, string> = {
-  "not-started": "טרם התחיל",
-  weak: "חלש",
+  "not-started": "לא התחלתי",
+  weak: "צריך חיזוק",
   learning: "בלמידה",
-  strong: "חזק",
+  strong: "שולט",
 };
 
 const tones: Record<TopicLevel, string> = {

@@ -14,15 +14,17 @@ function Progress({
     <ProgressPrimitive.Root
       data-slot="progress"
       className={cn(
-        "relative flex h-2 w-full items-center overflow-x-hidden rounded-2xl bg-muted",
+        // flex + width-based indicator fills from the inline-start edge, so it
+        // works in both LTR and RTL (a translateX transform would not flip).
+        "relative flex h-2 w-full items-center overflow-hidden rounded-2xl bg-muted",
         className
       )}
       {...props}
     >
       <ProgressPrimitive.Indicator
         data-slot="progress-indicator"
-        className="size-full flex-1 bg-primary transition-all"
-        style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+        className="h-full rounded-2xl bg-primary transition-[width] duration-500"
+        style={{ width: `${value || 0}%` }}
       />
     </ProgressPrimitive.Root>
   )

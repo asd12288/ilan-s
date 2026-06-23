@@ -20,7 +20,7 @@ export function CourseProgress({
     >
       <CourseIcon courseId={course.id} />
       <span className="truncate text-sm font-medium">{course.name}</span>
-      <Progress value={progress} className="h-1.5" />
+      <Progress value={progress} className="h-2" />
       <span className="text-end text-sm font-medium tabular-nums">{progress}%</span>
       <ChevronLeftIcon className="text-muted-foreground" />
     </Link>

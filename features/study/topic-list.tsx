@@ -23,10 +23,10 @@ type LevelFilter = TopicLevel | "all";
 // paint a controlled initial value until its portalled items have mounted.
 const levelLabels: Record<LevelFilter, string> = {
   all: "כל הרמות",
-  "not-started": "טרם התחיל",
-  weak: "חלש",
+  "not-started": "לא התחלתי",
+  weak: "צריך חיזוק",
   learning: "בלמידה",
-  strong: "חזק",
+  strong: "שולט",
 };
 
 export function TopicList({ topics, courses }: { topics: Topic[]; courses: Course[] }) {
@@ -83,10 +83,10 @@ export function TopicList({ topics, courses }: { topics: Topic[]; courses: Cours
             <SelectContent>
               <SelectGroup>
                 <SelectItem value="all">כל הרמות</SelectItem>
-                <SelectItem value="not-started">טרם התחיל</SelectItem>
-                <SelectItem value="weak">חלש</SelectItem>
+                <SelectItem value="not-started">לא התחלתי</SelectItem>
+                <SelectItem value="weak">צריך חיזוק</SelectItem>
                 <SelectItem value="learning">בלמידה</SelectItem>
-                <SelectItem value="strong">חזק</SelectItem>
+                <SelectItem value="strong">שולט</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

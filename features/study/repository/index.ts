@@ -28,9 +28,6 @@ function withSeedCatalog(data: StudyData): StudyData {
     .filter((topic) => managedCourseIds.has(topic.courseId))
     .map((catalogTopic) => {
       const storedTopic = storedTopicById.get(catalogTopic.id);
-      const storedSubtopicById = new Map(
-        storedTopic?.subtopics.map((subtopic) => [subtopic.id, subtopic]) ?? [],
-      );
 
       return {
         ...catalogTopic,
@@ -38,12 +35,10 @@ function withSeedCatalog(data: StudyData): StudyData {
         importance: storedTopic?.importance ?? catalogTopic.importance,
         lastStudiedAt: storedTopic?.lastStudiedAt,
         nextAction: storedTopic?.nextAction,
-        subtopics: catalogTopic.subtopics.map((catalogSubtopic) => ({
-          ...catalogSubtopic,
-          completed:
-            storedSubtopicById.get(catalogSubtopic.id)?.completed ??
-            catalogSubtopic.completed,
-        })),
+        // Subtopics are user-owned: keep whatever was saved (adds, removals and
+        // completion). The catalog only seeds subtopics for topics that have
+        // never been stored.
+        subtopics: storedTopic ? storedTopic.subtopics : catalogTopic.subtopics,
       };
     });
 

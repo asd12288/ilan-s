@@ -43,11 +43,50 @@ describe("rankTopics", () => {
 });
 
 describe("courseProgress", () => {
-  it("averages level weights into a percentage", () => {
-    expect(courseProgress(seedData.topics.slice(0, 4))).toBe(25);
+  const withChecklists: StudyData["topics"] = [
+    {
+      id: "t1",
+      courseId: "a",
+      name: "T1",
+      level: "weak",
+      importance: "normal",
+      position: 0,
+      subtopics: [
+        { id: "t1-a", name: "a", completed: true, position: 0 },
+        { id: "t1-b", name: "b", completed: false, position: 1 },
+      ],
+    },
+    {
+      id: "t2",
+      courseId: "a",
+      name: "T2",
+      level: "strong",
+      importance: "normal",
+      position: 1,
+      subtopics: [
+        { id: "t2-a", name: "a", completed: true, position: 0 },
+        { id: "t2-b", name: "b", completed: true, position: 1 },
+      ],
+    },
+  ];
+
+  it("is the share of completed subtopics across the course", () => {
+    // 3 of 4 subtopics completed → 75%
+    expect(courseProgress(withChecklists)).toBe(75);
   });
 
-  it("returns zero for an empty course", () => {
+  it("ignores level — only subtopics count", () => {
+    // every topic strong, but no subtopics completed → 0%
+    const allStrongNoneDone = withChecklists.map((topic) => ({
+      ...topic,
+      level: "strong" as const,
+      subtopics: topic.subtopics.map((s) => ({ ...s, completed: false })),
+    }));
+    expect(courseProgress(allStrongNoneDone)).toBe(0);
+  });
+
+  it("returns zero when there are no subtopics", () => {
     expect(courseProgress([])).toBe(0);
+    expect(courseProgress(seedData.topics.slice(0, 4))).toBe(0);
   });
 });

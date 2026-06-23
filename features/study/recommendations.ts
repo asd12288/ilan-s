@@ -26,13 +26,13 @@ export function rankTopics(data: StudyData): Topic[] {
     .slice(0, 5);
 }
 
+// Progress reflects how much material has been studied — the share of completed
+// subtopics across the course. Status/level is a separate readiness signal and
+// no longer feeds the bar. Topics without a checklist contribute nothing.
 export function courseProgress(topics: Topic[]): number {
-  if (topics.length === 0) return 0;
+  const subtopics = topics.flatMap((topic) => topic.subtopics);
+  if (subtopics.length === 0) return 0;
 
-  const completed = topics.reduce(
-    (sum, topic) => sum + levelRank[topic.level],
-    0,
-  );
-
-  return Math.round((completed / (topics.length * levelRank.strong)) * 100);
+  const completed = subtopics.filter((subtopic) => subtopic.completed).length;
+  return Math.round((completed / subtopics.length) * 100);
 }

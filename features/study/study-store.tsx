@@ -12,12 +12,16 @@ import {
 import { toast } from "sonner";
 
 import {
+  addSubtopicAction,
+  removeSubtopicAction,
   updateSubtopicAction,
   updateTopicAction,
   updateTopicLevelAction,
 } from "./actions";
 import type { Importance, StudyData, TopicLevel } from "./model";
 import {
+  applyAddSubtopic,
+  applyRemoveSubtopic,
   applySubtopicUpdate,
   applyTopicLevelUpdate,
   applyTopicUpdate,
@@ -33,6 +37,8 @@ type StudyStore = {
     subtopicId: string,
     completed: boolean,
   ) => void;
+  addSubtopic: (topicId: string, subtopicId: string, name: string) => void;
+  removeSubtopic: (topicId: string, subtopicId: string) => void;
   updateTopic: (input: {
     topicId: string;
     level: TopicLevel;
@@ -113,6 +119,17 @@ export function StudyProvider({
           (current) =>
             applySubtopicUpdate(current, { topicId, subtopicId, completed }),
           () => updateSubtopicAction(topicId, subtopicId, completed),
+        ),
+      addSubtopic: (topicId, subtopicId, name) =>
+        runMutation(
+          (current) =>
+            applyAddSubtopic(current, { topicId, subtopicId, name }),
+          () => addSubtopicAction(topicId, subtopicId, name),
+        ),
+      removeSubtopic: (topicId, subtopicId) =>
+        runMutation(
+          (current) => applyRemoveSubtopic(current, { topicId, subtopicId }),
+          () => removeSubtopicAction(topicId, subtopicId),
         ),
       updateTopic: ({ topicId, level, importance, nextAction }) =>
         runMutation(

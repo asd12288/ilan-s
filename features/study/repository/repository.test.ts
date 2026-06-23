@@ -41,7 +41,9 @@ describe("study repository orchestration", () => {
     expect(repository.writes).toHaveLength(0);
   });
 
-  it("adds seeded subtopics to an existing stored topic", async () => {
+  it("keeps user-owned subtopics on a stored topic (does not re-seed)", async () => {
+    // Subtopics are user-owned: a stored topic that has had its subtopics
+    // emptied stays empty rather than being refilled from the catalog.
     const withoutSubtopics = {
       ...seed,
       topics: seed.topics.map((topic) =>
@@ -52,6 +54,22 @@ describe("study repository orchestration", () => {
       data: withoutSubtopics,
       version: "etag-1",
     });
+
+    const result = await readStudyDataWith(repository);
+
+    expect(
+      result.topics.find((topic) => topic.id === "discrete-relations")
+        ?.subtopics.length,
+    ).toBe(0);
+  });
+
+  it("seeds subtopics for a managed topic missing from storage", async () => {
+    // The catalog still supplies the hierarchy for topics never stored.
+    const withoutTopic = {
+      ...seed,
+      topics: seed.topics.filter((topic) => topic.id !== "discrete-relations"),
+    };
+    const repository = fakeRepository({ data: withoutTopic, version: "etag-1" });
 
     const result = await readStudyDataWith(repository);
 
@@ -107,7 +125,9 @@ describe("study repository orchestration", () => {
       level: "weak",
       importance: "high",
     });
-    expect(systems?.subtopics).toHaveLength(5);
+    // Subtopics are user-owned: the stored (empty) list is preserved, not
+    // refilled from the catalog. Topic identity/name/progress still sync.
+    expect(systems?.subtopics).toHaveLength(0);
   });
 
   it("uses the seeded topic hierarchy for mathematical logic", async () => {

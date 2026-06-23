@@ -9,9 +9,13 @@ import {
   updateStudyData,
 } from "./repository";
 import {
+  applyAddSubtopic,
+  applyRemoveSubtopic,
   applySubtopicUpdate,
   applyTopicLevelUpdate,
   applyTopicUpdate,
+  subtopicAddSchema,
+  subtopicRemoveSchema,
   subtopicUpdateSchema,
   topicLevelUpdateSchema,
   topicUpdateSchema,
@@ -123,6 +127,77 @@ export async function updateSubtopicAction(
   try {
     const stored = await updateStudyData((data) =>
       applySubtopicUpdate(data, parsed.data),
+    );
+    const topic = stored.data.topics.find(
+      (candidate) => candidate.id === parsed.data.topicId,
+    );
+
+    revalidatePath("/");
+    revalidatePath("/topics");
+    if (topic) revalidatePath(`/courses/${topic.courseId}`);
+
+    return { status: "success" };
+  } catch (error) {
+    if (error instanceof StudyDataConflictError) {
+      return {
+        status: "error",
+        message: "הנתונים השתנו במכשיר אחר. רעננו ונסו שוב.",
+      };
+    }
+    throw error;
+  }
+}
+
+export async function addSubtopicAction(
+  topicId: string,
+  subtopicId: string,
+  name: unknown,
+): Promise<SubtopicResult> {
+  await requireSession();
+
+  const parsed = subtopicAddSchema.safeParse({ topicId, subtopicId, name });
+  if (!parsed.success) {
+    return { status: "error", message: "שם תת-נושא לא תקין" };
+  }
+
+  try {
+    const stored = await updateStudyData((data) =>
+      applyAddSubtopic(data, parsed.data),
+    );
+    const topic = stored.data.topics.find(
+      (candidate) => candidate.id === parsed.data.topicId,
+    );
+
+    revalidatePath("/");
+    revalidatePath("/topics");
+    if (topic) revalidatePath(`/courses/${topic.courseId}`);
+
+    return { status: "success" };
+  } catch (error) {
+    if (error instanceof StudyDataConflictError) {
+      return {
+        status: "error",
+        message: "הנתונים השתנו במכשיר אחר. רעננו ונסו שוב.",
+      };
+    }
+    throw error;
+  }
+}
+
+export async function removeSubtopicAction(
+  topicId: string,
+  subtopicId: string,
+): Promise<SubtopicResult> {
+  await requireSession();
+
+  const parsed = subtopicRemoveSchema.safeParse({ topicId, subtopicId });
+  if (!parsed.success) {
+    return { status: "error", message: "מצב לא תקין" };
+  }
+
+  try {
+    const stored = await updateStudyData((data) =>
+      applyRemoveSubtopic(data, parsed.data),
     );
     const topic = stored.data.topics.find(
       (candidate) => candidate.id === parsed.data.topicId,

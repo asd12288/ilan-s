@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PencilIcon } from "lucide-react";
+import { PencilIcon, PlusIcon, XIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -34,10 +34,20 @@ export function TopicEditor({
   topic: Topic;
   compact?: boolean;
 }) {
-  const { updateTopic } = useStudy();
+  const { updateTopic, addSubtopic, removeSubtopic } = useStudy();
   const [open, setOpen] = useState(false);
   const [level, setLevel] = useState<TopicLevel>(topic.level);
   const [importance, setImportance] = useState<Importance>(topic.importance);
+  const [newSubtopic, setNewSubtopic] = useState("");
+
+  const subtopics = topic.subtopics.toSorted((a, b) => a.position - b.position);
+
+  function onAddSubtopic() {
+    const name = newSubtopic.trim();
+    if (!name) return;
+    addSubtopic(topic.id, crypto.randomUUID(), name);
+    setNewSubtopic("");
+  }
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -84,10 +94,10 @@ export function TopicEditor({
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectItem value="not-started">טרם התחיל</SelectItem>
-                    <SelectItem value="weak">חלש</SelectItem>
+                    <SelectItem value="not-started">לא התחלתי</SelectItem>
+                    <SelectItem value="weak">צריך חיזוק</SelectItem>
                     <SelectItem value="learning">בלמידה</SelectItem>
-                    <SelectItem value="strong">חזק</SelectItem>
+                    <SelectItem value="strong">שולט</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -115,6 +125,55 @@ export function TopicEditor({
                 maxLength={120}
                 placeholder="לא חובה"
               />
+            </Field>
+            <Field>
+              <FieldLabel htmlFor={`${topic.id}-add-subtopic`}>תתי-נושאים</FieldLabel>
+              {subtopics.length > 0 && (
+                <ul className="flex flex-col gap-1">
+                  {subtopics.map((subtopic) => (
+                    <li
+                      key={subtopic.id}
+                      className="flex items-center justify-between gap-2 rounded-xl bg-muted/50 ps-3 pe-1 py-1 text-sm"
+                    >
+                      <span className="truncate">{subtopic.name}</span>
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon-sm"
+                        aria-label={`מחיקת ${subtopic.name}`}
+                        onClick={() => removeSubtopic(topic.id, subtopic.id)}
+                      >
+                        <XIcon />
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <div className="flex items-center gap-2">
+                <Input
+                  id={`${topic.id}-add-subtopic`}
+                  value={newSubtopic}
+                  onChange={(event) => setNewSubtopic(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                      event.preventDefault();
+                      onAddSubtopic();
+                    }
+                  }}
+                  maxLength={100}
+                  placeholder="הוספת תת-נושא"
+                />
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="icon"
+                  aria-label="הוספת תת-נושא"
+                  onClick={onAddSubtopic}
+                  disabled={newSubtopic.trim() === ""}
+                >
+                  <PlusIcon />
+                </Button>
+              </div>
             </Field>
           </FieldGroup>
           <DialogFooter>
