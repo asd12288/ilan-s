@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState, type CSSProperties } from "react";
+
 import {
   Collapsible,
   CollapsibleContent,
@@ -14,6 +16,45 @@ import type { Subtopic, Topic } from "./model";
 import { useStudy } from "./study-store";
 import { TopicEditor } from "./topic-editor";
 
+const confettiPieces = [
+  { x: "-20px", y: "-16px", rotate: "-28deg", color: "var(--primary)" },
+  { x: "-12px", y: "-26px", rotate: "18deg", color: "var(--status-strong)" },
+  { x: "0px", y: "-30px", rotate: "54deg", color: "var(--status-learning)" },
+  { x: "13px", y: "-24px", rotate: "-42deg", color: "var(--status-weak)" },
+  { x: "22px", y: "-12px", rotate: "24deg", color: "var(--primary)" },
+  { x: "-17px", y: "5px", rotate: "48deg", color: "var(--status-learning)" },
+  { x: "7px", y: "10px", rotate: "-18deg", color: "var(--status-strong)" },
+  { x: "20px", y: "5px", rotate: "60deg", color: "var(--status-weak)" },
+];
+
+function SubtopicConfetti({ burst }: { burst: number }) {
+  if (burst === 0) return null;
+
+  return (
+    <span
+      key={burst}
+      aria-hidden
+      className="pointer-events-none absolute inset-1/2 z-10 size-0"
+    >
+      {confettiPieces.map((piece, index) => (
+        <span
+          key={`${burst}-${index}`}
+          className="subtopic-confetti-piece absolute block size-1 rounded-[1px]"
+          style={
+            {
+              "--confetti-x": piece.x,
+              "--confetti-y": piece.y,
+              "--confetti-rotate": piece.rotate,
+              "--confetti-color": piece.color,
+              animationDelay: `${index * 12}ms`,
+            } as CSSProperties
+          }
+        />
+      ))}
+    </span>
+  );
+}
+
 function SubtopicToggle({
   topicId,
   subtopic,
@@ -22,11 +63,22 @@ function SubtopicToggle({
   subtopic: Subtopic;
 }) {
   const { toggleSubtopic } = useStudy();
+  const [burst, setBurst] = useState(0);
   const completed = subtopic.completed;
   const controlId = `${topicId}-${subtopic.id}`;
 
+  useEffect(() => {
+    if (burst === 0) return;
+
+    const timeout = window.setTimeout(() => setBurst(0), 650);
+    return () => window.clearTimeout(timeout);
+  }, [burst]);
+
   function onCheckedChange(next: boolean) {
-    if (next !== completed) toggleSubtopic(topicId, subtopic.id, next);
+    if (next !== completed) {
+      setBurst((current) => current + 1);
+      toggleSubtopic(topicId, subtopic.id, next);
+    }
   }
 
   return (
@@ -38,13 +90,16 @@ function SubtopicToggle({
       )}
     >
       <span className={cn(completed && "line-through")}>{subtopic.name}</span>
-      <Switch
-        id={controlId}
-        size="sm"
-        checked={completed}
-        onCheckedChange={onCheckedChange}
-        aria-label={`${subtopic.name}: ${completed ? "עשיתי" : "לא עשיתי"}`}
-      />
+      <span className="relative grid shrink-0 place-items-center">
+        <SubtopicConfetti burst={burst} />
+        <Switch
+          id={controlId}
+          size="sm"
+          checked={completed}
+          onCheckedChange={onCheckedChange}
+          aria-label={`${subtopic.name}: ${completed ? "עשיתי" : "לא עשיתי"}`}
+        />
+      </span>
     </label>
   );
 }

@@ -144,3 +144,41 @@
 ::selection {
   background: color-mix(in oklch, var(--primary) 18%, transparent);
 }
+
+@keyframes subtopic-confetti-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+        calc(-50% + var(--confetti-x)),
+        calc(-50% + var(--confetti-y))
+      )
+      scale(1) rotate(var(--confetti-rotate));
+  }
+}
+
+@layer components {
+  .subtopic-confetti-piece {
+    background: var(--confetti-color);
+    animation: subtopic-confetti-burst 520ms cubic-bezier(0.16, 1, 0.3, 1)
+      both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subtopic-confetti-piece {
+    animation: none;
+    opacity: 1;
+    transform: translate(
+        calc(-50% + var(--confetti-x) / 2),
+        calc(-50% + var(--confetti-y) / 2)
+      )
+      rotate(var(--confetti-rotate));
+  }
+}
