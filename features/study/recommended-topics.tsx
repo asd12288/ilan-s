@@ -33,6 +33,8 @@ export function RecommendedTopics({
           const course = courseById.get(topic.courseId);
           const days = course ? daysUntil(course.examAt) : null;
           const tone = days === null ? "" : urgencyTone[examUrgency(days)];
+          const nextAction = topic.nextAction?.trim();
+
           return (
             <div
               key={topic.id}
@@ -40,6 +42,11 @@ export function RecommendedTopics({
             >
               <div className="min-w-0">
                 <TopicEditor topic={topic} />
+                {nextAction ? (
+                  <p className="mt-1 truncate px-3 text-xs text-muted-foreground">
+                    {nextAction}
+                  </p>
+                ) : null}
                 <p className="mt-1 truncate text-xs text-muted-foreground sm:hidden">
                   {course?.shortName}
                   {days !== null && (
